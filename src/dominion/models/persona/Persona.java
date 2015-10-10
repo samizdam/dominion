@@ -1,11 +1,13 @@
 package dominion.models.persona;
 
+import java.util.Collection;
 import java.util.List;
 
 import dominion.models.Culture;
 import dominion.models.Date;
 import dominion.models.Title;
 import dominion.models.feod.Feod;
+import dominion.models.persona.name.PersonaName;
 
 /**
  * 
@@ -17,9 +19,9 @@ public interface Persona {
     
     public PersonaName getName();
     
-    public List<Title> getTitles();
+    public Collection<Title> getTitles();
     
-    public List<Feod> getOwnedFeodsDeFacto();
+    public Collection<Feod> getOwnedFeodsDeFacto();
     
     public Date getDateOfBirth();
     
@@ -38,4 +40,8 @@ public interface Persona {
     public Gender getGender();
     
     public Culture getCulture();
+    
+    public Persona getFather();
+    
+    public Persona getMother();
 }

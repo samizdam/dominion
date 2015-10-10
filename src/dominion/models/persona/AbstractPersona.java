@@ -1,36 +1,59 @@
 package dominion.models.persona;
 
+import java.util.Collection;
 import java.util.List;
+import java.util.PriorityQueue;
 
 import dominion.models.Culture;
 import dominion.models.Date;
 import dominion.models.Title;
 import dominion.models.feod.Feod;
+import dominion.models.persona.name.DefaultPersonaNameGenerationStrategy;
+import dominion.models.persona.name.PersonaName;
+import dominion.models.persona.name.PersonaNameGenerationStrategyFactory;
+import dominion.models.persona.name.Woman;
 
-public abstract class AbstractPersona implements Persona{
+public abstract class AbstractPersona implements Persona {
     private Persona spouse;
     private Culture culture;
     private List<Characteristic> characteristics;
     private List<PersonaModifier> mods;
     private Date dateOfDeath;
     private Date dateOfBirth;
-    private List<Title> titles;
-    private List<Feod> feods;
+    private Collection<Title> titles = new PriorityQueue<Title>();
+    private Collection<Feod> feods = new PriorityQueue<Feod>();
     private PersonaName name;
-    private Gender gender;
+    private Man father;
+    private Woman mother;
+
+    public AbstractPersona(Man father, Woman mother) {
+	this.father = father;
+	this.mother = mother;
+    }
+
+    public AbstractPersona(Man father, Woman mother,
+	    PersonaNameGenerationStrategyFactory nameGenerationStrategyFactory) {
+	this.father = father;
+	this.mother = mother;
+	this.name = nameGenerationStrategyFactory.getSrategy().generateName(this);
+    }
 
     @Override
     public PersonaName getName() {
+	if(this.name == null){
+	    PersonaNameGenerationStrategyFactory factory = new DefaultPersonaNameGenerationStrategy();
+	    this.name = factory.getSrategy().generateName(this);
+	}
 	return this.name;
     }
 
     @Override
-    public List<Title> getTitles() {
+    public Collection<Title> getTitles() {
 	return this.titles;
     }
 
     @Override
-    public List<Feod> getOwnedFeodsDeFacto() {
+    public Collection<Feod> getOwnedFeodsDeFacto() {
 	return this.feods;
     }
 
@@ -46,7 +69,7 @@ public abstract class AbstractPersona implements Persona{
 
     @Override
     public void addModifier(PersonaModifier mod) {
-	this.mods.add(mod);	
+	this.mods.add(mod);
     }
 
     @Override
@@ -56,13 +79,12 @@ public abstract class AbstractPersona implements Persona{
 
     @Override
     public boolean isMarried() {
-	return this.spouse.equals(null);
+	return this.spouse != null;
     }
 
     @Override
     public void setSpouse(Persona persona) {
 	this.spouse = persona;
-	
     }
 
     @Override
@@ -73,6 +95,14 @@ public abstract class AbstractPersona implements Persona{
     @Override
     public Culture getCulture() {
 	return this.culture;
+    }
+
+    public Man getFather() {
+	return this.father;
+    }
+
+    public Woman getMother() {
+	return this.mother;
     }
 
 }
