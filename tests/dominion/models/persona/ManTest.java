@@ -7,7 +7,6 @@ import dominion.models.culture.slavic.SlavicTreePartName;
 import dominion.models.persona.name.FamilyName;
 import dominion.models.persona.name.FirstName;
 import dominion.models.persona.name.Patronym;
-import dominion.models.persona.name.Woman;
 import junit.framework.TestCase;
 
 public class ManTest extends TestCase {

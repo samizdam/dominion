@@ -2,7 +2,6 @@ package dominion.models.persona;
 
 import static org.mockito.Mockito.mock;
 
-import dominion.models.persona.name.Woman;
 import junit.framework.TestCase;
 
 public class WomenTest extends TestCase {
