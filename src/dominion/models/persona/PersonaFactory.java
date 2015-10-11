@@ -39,8 +39,8 @@ public class PersonaFactory {
 	return woman;
     }
     
-    public UnknowPersona createUnknowPersona(){
-	return new UnknowPersona();
+    public UnknownPersona createUnknowPersona(){
+	return new UnknownPersona();
     }
     
 }

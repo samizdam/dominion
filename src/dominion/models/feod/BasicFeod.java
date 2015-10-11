@@ -8,7 +8,7 @@ import dominion.models.Profit;
 import dominion.models.culture.Culture;
 import dominion.models.land.Land;
 import dominion.models.persona.Persona;
-import dominion.models.persona.UnknowPersona;
+import dominion.models.persona.UnknownPersona;
 import dominion.models.title.Title;
 
 public class BasicFeod implements Feod {
@@ -19,7 +19,7 @@ public class BasicFeod implements Feod {
     private Name name;
     private Title title;
     private Feod parentFeod;
-    private Persona ownerDeFacto = new UnknowPersona();
+    private Persona ownerDeFacto = new UnknownPersona();
     private Persona ownerDeJure;
     private CulturesCollection culturesCollection;
 

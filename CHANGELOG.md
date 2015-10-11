@@ -22,6 +22,7 @@
 ### Changed
 - Title classes moved to sub-package. 
 - Rename PersonaNameGenerationStrategy to PersonaNameGenerator. 
+- Rename UnknowPersona to UnknownPersona. 
 
 ### Removed
 - Naming Strategies Factories. 
