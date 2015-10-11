@@ -2,6 +2,7 @@ package dominion.models.persona;
 
 import java.util.List;
 
+import dominion.models.Characteristic;
 import dominion.models.Modifier;
 
 public interface PersonaModifier extends Modifier{

@@ -15,7 +15,7 @@ import dominion.models.title.Title;
 public abstract class AbstractPersona implements WellBornPersona {
     private Persona spouse;
     private Culture culture;
-    private List<Characteristic> characteristics;
+    private PersonaCharacteristicCollection<PersonaCharacteristic> characteristics;
     private List<PersonaModifier> mods;
     private Date dateOfDeath;
     private Date dateOfBirth;
@@ -72,7 +72,7 @@ public abstract class AbstractPersona implements WellBornPersona {
     }
 
     @Override
-    public List<Characteristic> getCharacteristics() {
+    public PersonaCharacteristicCollection<PersonaCharacteristic> getCharacteristics() {
 	return this.characteristics;
     }
 

@@ -1,7 +1,6 @@
 package dominion.models.persona;
 
 import java.util.Collection;
-import java.util.List;
 
 import dominion.models.Date;
 import dominion.models.culture.Culture;
@@ -19,7 +18,7 @@ public interface WellBornPersona extends Persona{
     
     public void addModifier(PersonaModifier mod);
     
-    public List<Characteristic> getCharacteristics();
+    public PersonaCharacteristicCollection<PersonaCharacteristic> getCharacteristics();
     
     public boolean isMarried();
     
