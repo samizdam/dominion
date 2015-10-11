@@ -49,6 +49,11 @@ public class ManTest extends TestCase {
 	assertEquals(mother, man.getMother());
     }
     
+    public void testGetOwnedFeodsDeFacto(){
+	Man man = this.createMan();
+	assertEquals(0, man.getOwnedFeodsDeFacto().size());
+    }
+    
     private Man createMan() {
 	return new Man(mock(Man.class), mock(Woman.class));
     }
