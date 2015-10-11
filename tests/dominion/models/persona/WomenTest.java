@@ -23,6 +23,11 @@ public class WomenTest extends TestCase {
 	Woman woman = this.createWoman();
 	assertFalse(woman.isMarried());
     }
+    
+    public void testGetCulture(){
+	Woman woman = this.createWoman();
+	assertTrue(woman.getCulture() instanceof SlavonianCulture);
+    }
 
     private Woman createWoman() {
 	return this.personaFactory.createWoman(mock(Man.class), mock(Woman.class));

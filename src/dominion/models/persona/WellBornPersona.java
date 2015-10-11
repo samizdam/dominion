@@ -30,6 +30,8 @@ public interface WellBornPersona extends Persona{
     
     public Gender getGender();
     
+    public void setCulture(Culture culture);
+    
     public Culture getCulture();
     
     public Persona getFather();

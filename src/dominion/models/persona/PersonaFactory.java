@@ -6,12 +6,16 @@ import dominion.models.persona.name.PersonaNameGenerator;
 
 public class PersonaFactory {
     
+    private Culture culture;
+    
     private PersonaNameGenerator nameGenerator;
     private CharacteristicGenerator characteristicGenerator;
     
+    
     public PersonaFactory(Culture culture) {
+	this.culture = culture;
 	this.setNameGenerator(culture.getPersonaNameGenerator());
-	this.setCharacteristicGenerator(culture.getPersonaCharacteristicGenerator());
+	this.setCharacteristicGenerator(culture.getPersonaCharacteristicGenerator());	
     }
 
     public void setNameGenerator(PersonaNameGenerator nameGenerator){
@@ -31,6 +35,7 @@ public class PersonaFactory {
     
     public Woman createWoman(Man father, Woman mother){
 	Woman woman = new Woman(father, mother, new PastDate()); 
+	woman.setCulture(this.culture);
 	return woman;
     }
     

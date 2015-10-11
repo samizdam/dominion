@@ -95,6 +95,10 @@ public abstract class AbstractPersona implements WellBornPersona {
 	return this.spouse;
     }
 
+    public void setCulture(Culture culture) {
+	this.culture = culture;
+    }
+    
     @Override
     public Culture getCulture() {
 	return this.culture;
