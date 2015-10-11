@@ -1,4 +1,4 @@
-package dominion.models;
+package dominion.models.title;
 
 import dominion.models.feod.Feod;
 

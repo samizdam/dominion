@@ -5,12 +5,12 @@ import java.util.List;
 import java.util.PriorityQueue;
 
 import dominion.models.Date;
-import dominion.models.Title;
 import dominion.models.culture.Culture;
 import dominion.models.feod.Feod;
 import dominion.models.persona.name.DefaultPersonaNameGenerationStrategy;
 import dominion.models.persona.name.PersonaName;
 import dominion.models.persona.name.PersonaNameGenerationStrategyFactory;
+import dominion.models.title.Title;
 
 public abstract class AbstractPersona implements WellBornPersona {
     private Persona spouse;

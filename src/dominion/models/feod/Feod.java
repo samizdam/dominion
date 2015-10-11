@@ -4,10 +4,10 @@ import java.util.List;
 
 import dominion.models.Name;
 import dominion.models.Profit;
-import dominion.models.Title;
 import dominion.models.culture.Culture;
 import dominion.models.land.Land;
 import dominion.models.persona.*;
+import dominion.models.title.Title;
 
 public interface Feod {
     

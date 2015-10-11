@@ -5,11 +5,11 @@ import java.util.List;
 
 import dominion.models.Name;
 import dominion.models.Profit;
-import dominion.models.Title;
 import dominion.models.culture.Culture;
 import dominion.models.land.Land;
 import dominion.models.persona.Persona;
 import dominion.models.persona.UnknowPersona;
+import dominion.models.title.Title;
 
 public class BasicFeod implements Feod {
 
