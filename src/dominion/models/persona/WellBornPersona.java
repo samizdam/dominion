@@ -18,6 +18,8 @@ public interface WellBornPersona extends Persona{
     
     public void addModifier(PersonaModifier mod);
     
+    public void setCharacteristics(PersonaCharacteristicCollection<PersonaCharacteristic> characteristics);
+    
     public PersonaCharacteristicCollection<PersonaCharacteristic> getCharacteristics();
     
     public boolean isMarried();

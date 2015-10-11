@@ -54,8 +54,15 @@ public class ManTest extends TestCase {
 	assertEquals(0, man.getOwnedFeodsDeFacto().size());
     }
     
+    public void testGetCharacteristics(){
+	Man man = this.createMan();
+	assertTrue(man.getCharacteristics() instanceof PersonaCharacteristicCollection);
+    }
+    
     private Man createMan() {
-	return new Man(mock(Man.class), mock(Woman.class));
+	Man father = mock(Man.class);
+	when(father.getName()).thenReturn(this.getSlavicStubName());
+	return this.createMan(father, mock(Woman.class));
     }
 
     private Man createMan(Man father, Woman mother) {

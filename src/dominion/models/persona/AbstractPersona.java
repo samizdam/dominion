@@ -71,6 +71,9 @@ public abstract class AbstractPersona implements WellBornPersona {
 	this.mods.add(mod);
     }
 
+    public void setCharacteristics(PersonaCharacteristicCollection<PersonaCharacteristic> characteristics) {
+	this.characteristics = characteristics;
+    }
     @Override
     public PersonaCharacteristicCollection<PersonaCharacteristic> getCharacteristics() {
 	return this.characteristics;
