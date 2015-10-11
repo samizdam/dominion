@@ -8,22 +8,26 @@ import dominion.models.persona.name.PersonaName;
 public class SlavicTreePartName implements PersonaName {
     
     private FirstName firstName;
-    private Patronym patronymic;
+    private Patronym patronym;
     private FamilyName familyName;
 
-    public SlavicTreePartName(FirstName firstName, Patronym patronymic, FamilyName familyName)
+    public SlavicTreePartName(FirstName firstName, Patronym patronym, FamilyName familyName)
     {
 	this.firstName = firstName;
-	this.patronymic = patronymic;
+	this.patronym = patronym;
 	this.familyName = familyName;
     }
     
+    public SlavicTreePartName(String firstName, String patronym, String familyName) {
+	this(new FirstName(firstName), new Patronym(patronym), new FamilyName(familyName));
+    }
+
     public FirstName getFirstName(){
 	return this.firstName;
     }
     
-    public Patronym getPatronymic(){
-	return this.patronymic;
+    public Patronym getPatronym(){
+	return this.patronym;
     }
     
     public FamilyName getFamilyName(){

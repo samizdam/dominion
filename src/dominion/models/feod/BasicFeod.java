@@ -1,5 +1,6 @@
 package dominion.models.feod;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import dominion.models.Name;
@@ -8,16 +9,17 @@ import dominion.models.Title;
 import dominion.models.culture.Culture;
 import dominion.models.land.Land;
 import dominion.models.persona.Persona;
+import dominion.models.persona.UnknowPersona;
 
 public class BasicFeod implements Feod {
 
-    private List<Land> land;
+    private List<Land> lands = new ArrayList<Land>();
     private Profit profit;
-    private List<Feod> subDomains;
+    private List<Feod> subDomains = new ArrayList<Feod>();
     private Name name;
     private Title title;
     private Feod parentFeod;
-    private Persona ownerDeFacto;
+    private Persona ownerDeFacto = new UnknowPersona();
     private Persona ownerDeJure;
     private CulturesCollection culturesCollection;
 
@@ -43,12 +45,12 @@ public class BasicFeod implements Feod {
 
     @Override
     public void addLand(Land land) {
-	this.land.add(land);
+	this.lands.add(land);
     }
 
     @Override
     public List<Land> getLangs() {
-	return this.land;
+	return this.lands;
     }
 
     @Override
@@ -69,7 +71,7 @@ public class BasicFeod implements Feod {
     
     @Override
     public boolean isSovereign() {
-	return this.parentFeod.equals(null);
+	return this.parentFeod == null;
     }
 
     @Override
@@ -95,6 +97,11 @@ public class BasicFeod implements Feod {
     @Override
     public Culture getDominantCulture() {
 	return this.culturesCollection.peek();
+    }
+
+    @Override
+    public Feod getParentFeod() {
+	return this.parentFeod;
     }
 
 }

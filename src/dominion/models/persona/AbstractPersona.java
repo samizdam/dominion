@@ -13,7 +13,7 @@ import dominion.models.persona.name.PersonaName;
 import dominion.models.persona.name.PersonaNameGenerationStrategyFactory;
 import dominion.models.persona.name.Woman;
 
-public abstract class AbstractPersona implements Persona {
+public abstract class AbstractPersona implements WellBornPersona {
     private Persona spouse;
     private Culture culture;
     private List<Characteristic> characteristics;
@@ -25,11 +25,21 @@ public abstract class AbstractPersona implements Persona {
     private PersonaName name;
     private Man father;
     private Woman mother;
+    protected Gender gender;
 
-    public AbstractPersona(Man father, Woman mother) {
+    protected AbstractPersona(Man father, Woman mother){
 	this.father = father;
-	this.mother = mother;
+	this.mother = mother;	
     }
+    
+    public static Man createMan(Man father, Woman mother) {
+	return new Man(father, mother);
+    }
+    
+    public static Woman createWoman(Man father, Woman mother){
+	return new Woman(father, mother);
+    }
+
 
     public AbstractPersona(Man father, Woman mother,
 	    PersonaNameGenerationStrategyFactory nameGenerationStrategyFactory) {
@@ -38,6 +48,12 @@ public abstract class AbstractPersona implements Persona {
 	this.name = nameGenerationStrategyFactory.getSrategy().generateName(this);
     }
 
+    @Override
+    public Gender getGender() {
+	return this.gender;
+    }
+    
+    
     @Override
     public PersonaName getName() {
 	if(this.name == null){
@@ -97,7 +113,7 @@ public abstract class AbstractPersona implements Persona {
 	return this.culture;
     }
 
-    public Man getFather() {
+    public Man getFather(){
 	return this.father;
     }
 

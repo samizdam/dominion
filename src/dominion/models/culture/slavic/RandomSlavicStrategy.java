@@ -1,7 +1,7 @@
 package dominion.models.culture.slavic;
 
 import dominion.models.persona.Man;
-import dominion.models.persona.Persona;
+import dominion.models.persona.WellBornPersona;
 import dominion.models.persona.name.FamilyName;
 import dominion.models.persona.name.FirstName;
 import dominion.models.persona.name.FirstNameRepository;
@@ -12,7 +12,7 @@ import dominion.models.persona.name.PersonaNameGenerationStrategy;
 public class RandomSlavicStrategy implements PersonaNameGenerationStrategy {
 
     @Override
-    public PersonaName generateName(Persona persona) {
+    public PersonaName generateName(WellBornPersona persona) {
 	FirstNameRepository nameRepo = new HardcodedSlavicFirstNameRepository();
 	FirstName firstName = new FirstName(nameRepo.getRandomStringForName(persona.getGender()));
 	Man father = (Man) persona.getFather();

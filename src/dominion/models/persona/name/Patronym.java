@@ -6,4 +6,7 @@ public class Patronym extends AbstractAnthroponym{
 	super(fatherName.toString() + "ович");
     }
 
+    public Patronym(String patronym){
+	super(patronym);
+    }
 }

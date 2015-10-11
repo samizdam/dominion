@@ -1,7 +1,7 @@
 package dominion.models.persona.name;
 
-import dominion.models.persona.Persona;
+import dominion.models.persona.WellBornPersona;
 
 public interface PersonaNameGenerationStrategy {
-    public PersonaName generateName(Persona persona);
+    public PersonaName generateName(WellBornPersona persona);
 }

@@ -31,6 +31,8 @@ public interface Feod {
     
     public void setParentFeod(Feod feod);
     
+    public Feod getParentFeod();
+    
     public Persona getOwnerDeFacto();
     
     public Persona getOwnerDeJure();

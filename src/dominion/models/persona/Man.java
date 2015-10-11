@@ -6,10 +6,6 @@ public class Man extends AbstractPersona {
 
     public Man(Man father, Woman mother) {
 	super(father, mother);
-    }
-
-    @Override
-    public Gender getGender() {
-	return Gender.male;
+	this.gender = Gender.male;
     }
 }
