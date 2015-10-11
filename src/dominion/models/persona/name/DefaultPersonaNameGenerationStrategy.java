@@ -4,9 +4,9 @@ import dominion.models.culture.slavic.RandomSlavicStrategy;
 
 public class DefaultPersonaNameGenerationStrategy implements PersonaNameGenerationStrategyFactory {
 
-    private PersonaNameGenerationStrategy strategy = new RandomSlavicStrategy(); 
+    private PersonaNameGenerator strategy = new RandomSlavicStrategy(); 
     @Override
-    public PersonaNameGenerationStrategy getSrategy() {
+    public PersonaNameGenerator getSrategy() {
 	return this.strategy;
     }
 

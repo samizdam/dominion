@@ -13,7 +13,7 @@
 - Add Land demography and other profit characteristics. 
 - Profit composite calculation for Feods from Lands. 
 - Some Modifier implementations for change profit.  
-- Normalize persons factoring and inheritance. 
+- Normalize persons factoring and inheritance. 	
 - Implement de-facto and de-jure title / feods owning. 
 - Culture interfaces and related types for plugin different logic in game. 
 - Data providing for all types of names (files or database persisted). 
@@ -21,6 +21,10 @@
 ## Version 0.0.2 - 2015-10-XX
 ### Changed
 - Title classes moved to sub-package. 
+- Rename PersonaNameGenerationStrategy to PersonaNameGenerator. 
+
+### Removed
+- Naming Strategies Factories. 
 
 ## Version 0.0.1 - 2015-10-11
 ### Added 

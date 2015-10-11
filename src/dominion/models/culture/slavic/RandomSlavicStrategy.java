@@ -7,10 +7,10 @@ import dominion.models.persona.name.FirstName;
 import dominion.models.persona.name.FirstNameRepository;
 import dominion.models.persona.name.Patronym;
 import dominion.models.persona.name.PersonaName;
-import dominion.models.persona.name.PersonaNameGenerationStrategy;
+import dominion.models.persona.name.PersonaNameGenerator;
 
-public class RandomSlavicStrategy implements PersonaNameGenerationStrategy {
-
+public class RandomSlavicStrategy implements PersonaNameGenerator {
+    
     @Override
     public PersonaName generateName(WellBornPersona persona) {
 	FirstNameRepository nameRepo = new HardcodedSlavicFirstNameRepository();

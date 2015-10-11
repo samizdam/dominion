@@ -1,22 +1,23 @@
 package dominion.models.persona;
 
-import dominion.models.persona.name.PersonaNameGenerationStrategyFactory;
+import dominion.models.culture.Culture;
+import dominion.models.persona.name.PersonaNameGenerator;
 
 public class PersonaFactory {
     
-    private PersonaNameGenerationStrategyFactory generatorFactory;
-
-    public PersonaFactory(PersonaNameGenerationStrategyFactory factory){
-	this.setGeneratorFactory(factory);
-    }
+    private PersonaNameGenerator nameGenerator;
     
-    public void setGeneratorFactory(PersonaNameGenerationStrategyFactory factory){
-	this.generatorFactory = factory;
+    public PersonaFactory(Culture culture) {
+	this.setNameGenerator(culture.getPersonaNameGenerator());
+    }
+
+    public void setNameGenerator(PersonaNameGenerator nameGenerator){
+	this.nameGenerator = nameGenerator;
     }
     
     public Man createMan(Man father, Woman mother){
 	Man man = new Man(father, mother);
-	man.setName(this.generatorFactory.getSrategy().generateName(man));
+	man.setName(this.nameGenerator.generateName(man));
 	return man;
     }
     

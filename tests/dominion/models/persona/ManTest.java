@@ -4,6 +4,7 @@ import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
 import dominion.models.culture.slavic.SlavicTreePartName;
+import dominion.models.culture.slavic.SlavonianСulture;
 import dominion.models.persona.name.FamilyName;
 import dominion.models.persona.name.FirstName;
 import dominion.models.persona.name.Patronym;
@@ -11,6 +12,8 @@ import junit.framework.TestCase;
 
 public class ManTest extends TestCase {
 
+    private PersonaFactory personaFactory = new PersonaFactory(new SlavonianСulture());
+    
     public void testGetGender() {
 	Man man = this.createMan();
 	assertEquals(Gender.male, man.getGender());
@@ -37,12 +40,20 @@ public class ManTest extends TestCase {
 	assertNotNull(man.getName());
     }
 
+    public void testGetMother(){
+	Man father = mock(Man.class);
+	Woman mother = mock(Woman.class);
+	when(father.getName()).thenReturn(this.getSlavicStubName());
+	Man man = this.createMan(father, mother);
+	assertEquals(mother, man.getMother());
+    }
+    
     private Man createMan() {
 	return new Man(mock(Man.class), mock(Woman.class));
     }
 
     private Man createMan(Man father, Woman mother) {
-	return new Man(father, mother);
+	return this.personaFactory.createMan(father, mother);
     }
     
     private SlavicTreePartName getSlavicStubName(){

@@ -1,7 +1,7 @@
 package dominion.models.culture;
 
-import dominion.models.persona.name.PersonaNameGenerationStrategy;
+import dominion.models.persona.name.PersonaNameGenerator;
 
 public interface Culture {
-    public PersonaNameGenerationStrategy getPersonaNameGenerationStrategy();
+    public PersonaNameGenerator getPersonaNameGenerator();
 }
