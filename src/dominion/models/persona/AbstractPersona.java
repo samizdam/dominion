@@ -4,9 +4,9 @@ import java.util.Collection;
 import java.util.List;
 import java.util.PriorityQueue;
 
-import dominion.models.Culture;
 import dominion.models.Date;
 import dominion.models.Title;
+import dominion.models.culture.Culture;
 import dominion.models.feod.Feod;
 import dominion.models.persona.name.DefaultPersonaNameGenerationStrategy;
 import dominion.models.persona.name.PersonaName;

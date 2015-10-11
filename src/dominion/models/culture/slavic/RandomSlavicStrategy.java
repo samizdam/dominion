@@ -1,7 +1,13 @@
-package dominion.models.persona.name;
+package dominion.models.culture.slavic;
 
 import dominion.models.persona.Man;
 import dominion.models.persona.Persona;
+import dominion.models.persona.name.FamilyName;
+import dominion.models.persona.name.FirstName;
+import dominion.models.persona.name.FirstNameRepository;
+import dominion.models.persona.name.Patronym;
+import dominion.models.persona.name.PersonaName;
+import dominion.models.persona.name.PersonaNameGenerationStrategy;
 
 public class RandomSlavicStrategy implements PersonaNameGenerationStrategy {
 

@@ -1,10 +1,11 @@
-package dominion.models.persona.name;
+package dominion.models.culture.slavic;
 
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Random;
 
 import dominion.models.persona.Gender;
+import dominion.models.persona.name.FirstNameRepository;
 
 public class HardcodedSlavicFirstNameRepository implements FirstNameRepository {
 

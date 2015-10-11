@@ -3,10 +3,10 @@ package dominion.models.persona;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
+import dominion.models.culture.slavic.SlavicTreePartName;
 import dominion.models.persona.name.FamilyName;
 import dominion.models.persona.name.FirstName;
 import dominion.models.persona.name.Patronym;
-import dominion.models.persona.name.SlavicTreePartName;
 import dominion.models.persona.name.Woman;
 import junit.framework.TestCase;
 

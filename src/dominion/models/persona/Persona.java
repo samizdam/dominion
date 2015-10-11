@@ -3,9 +3,9 @@ package dominion.models.persona;
 import java.util.Collection;
 import java.util.List;
 
-import dominion.models.Culture;
 import dominion.models.Date;
 import dominion.models.Title;
+import dominion.models.culture.Culture;
 import dominion.models.feod.Feod;
 import dominion.models.persona.name.PersonaName;
 
