@@ -1,10 +1,11 @@
 package dominion.models.persona;
 
 import static org.mockito.Mockito.mock;
+
 import static org.mockito.Mockito.when;
 
 import dominion.models.culture.slavic.SlavicTreePartName;
-import dominion.models.culture.slavic.SlavonianСulture;
+import dominion.models.culture.slavic.SlavonianCulture;
 import dominion.models.persona.name.FamilyName;
 import dominion.models.persona.name.FirstName;
 import dominion.models.persona.name.Patronym;
@@ -12,7 +13,7 @@ import junit.framework.TestCase;
 
 public class ManTest extends TestCase {
 
-    private PersonaFactory personaFactory = new PersonaFactory(new SlavonianСulture());
+    private PersonaFactory personaFactory = new PersonaFactory(new SlavonianCulture());
     
     public void testGetGender() {
 	Man man = this.createMan();
