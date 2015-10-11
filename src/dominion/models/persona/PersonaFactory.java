@@ -1,5 +1,6 @@
 package dominion.models.persona;
 
+import dominion.models.PastDate;
 import dominion.models.culture.Culture;
 import dominion.models.persona.name.PersonaNameGenerator;
 
@@ -22,14 +23,14 @@ public class PersonaFactory {
     }
     
     public Man createMan(Man father, Woman mother){
-	Man man = new Man(father, mother);
+	Man man = new Man(father, mother, new PastDate());
 	man.setName(this.nameGenerator.generateName(man));
 	man.setCharacteristics(this.characteristicGenerator.generateCollection(man));
 	return man;
     }
     
     public Woman createWoman(Man father, Woman mother){
-	Woman woman = new Woman(father, mother); 
+	Woman woman = new Woman(father, mother, new PastDate()); 
 	return woman;
     }
     

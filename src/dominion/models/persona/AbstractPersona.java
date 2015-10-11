@@ -26,9 +26,10 @@ public abstract class AbstractPersona implements WellBornPersona {
     private Woman mother;
     protected Gender gender;
 
-    protected AbstractPersona(Man father, Woman mother){
+    protected AbstractPersona(Man father, Woman mother, Date dateOfBirth){
 	this.father = father;
-	this.mother = mother;	
+	this.mother = mother;
+	this.dateOfBirth = dateOfBirth;
     }
 
     @Override
