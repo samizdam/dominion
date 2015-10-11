@@ -6,4 +6,6 @@ public class Man extends AbstractPersona {
 	super(father, mother);
 	this.gender = Gender.male;
     }
+
+
 }

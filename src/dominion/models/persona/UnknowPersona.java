@@ -12,4 +12,10 @@ public class UnknowPersona implements Persona{
 	return this.name;
     }
 
+    @Override
+    public void setName(PersonaName name) {
+	this.name = name;
+	
+    }
+
 }

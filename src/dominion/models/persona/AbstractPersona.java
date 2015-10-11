@@ -30,22 +30,6 @@ public abstract class AbstractPersona implements WellBornPersona {
 	this.father = father;
 	this.mother = mother;	
     }
-    
-    public static Man createMan(Man father, Woman mother) {
-	return new Man(father, mother);
-    }
-    
-    public static Woman createWoman(Man father, Woman mother){
-	return new Woman(father, mother);
-    }
-
-
-    public AbstractPersona(Man father, Woman mother,
-	    PersonaNameGenerationStrategyFactory nameGenerationStrategyFactory) {
-	this.father = father;
-	this.mother = mother;
-	this.name = nameGenerationStrategyFactory.getSrategy().generateName(this);
-    }
 
     @Override
     public Gender getGender() {
@@ -118,6 +102,10 @@ public abstract class AbstractPersona implements WellBornPersona {
 
     public Woman getMother() {
 	return this.mother;
+    }
+    
+    public void setName(PersonaName name) {
+	this.name = name;	
     }
 
 }

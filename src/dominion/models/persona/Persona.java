@@ -12,4 +12,6 @@ public interface Persona {
     
     public PersonaName getName();
     
+    public void setName(PersonaName name);
+    
 }
