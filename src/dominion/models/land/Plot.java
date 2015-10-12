@@ -6,6 +6,7 @@ import dominion.models.feod.Feod;
 public class Plot implements Land{
 
     private LandName name;
+    private Feod domain;
 
     public Plot(LandName name){
 	this.name = name;
@@ -17,14 +18,13 @@ public class Plot implements Land{
 
     @Override
     public void setDomain(Feod domain) {
-	// TODO Auto-generated method stub
+	this.domain = domain;
 	
     }
 
     @Override
     public Feod getDomain() {
-	// TODO Auto-generated method stub
-	return null;
+	return this.domain;
     }
 
     @Override

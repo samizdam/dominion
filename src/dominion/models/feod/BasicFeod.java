@@ -3,34 +3,23 @@ package dominion.models.feod;
 import java.util.ArrayList;
 import java.util.List;
 
-import dominion.models.Name;
 import dominion.models.Profit;
-import dominion.models.culture.Culture;
-import dominion.models.land.Land;
 import dominion.models.persona.Persona;
 import dominion.models.persona.UnknownPersona;
 import dominion.models.title.Title;
 
-public class BasicFeod implements Feod {
+public class BasicFeod extends AbstractFeod {
 
-    private List<Land> lands = new ArrayList<Land>();
+    BasicFeod(FeodName name) {
+	super(name);
+    }
+    
     private Profit profit;
     private List<Feod> subDomains = new ArrayList<Feod>();
-    private Name name;
     private Title title;
     private Feod parentFeod;
     private Persona ownerDeFacto = new UnknownPersona();
     private Persona ownerDeJure;
-    private CulturesCollection culturesCollection;
-
-    public BasicFeod(FeodName name){
-	this.name = name;
-    }
-    
-    @Override
-    public Name getName() {
-	return this.name;
-    }
 
     @Override
     public void addSubDomain(Feod domain) throws Exception {
@@ -41,16 +30,6 @@ public class BasicFeod implements Feod {
     @Override
     public List<Feod> getSubDomains() {
 	return this.subDomains;
-    }
-
-    @Override
-    public void addLand(Land land) {
-	this.lands.add(land);
-    }
-
-    @Override
-    public List<Land> getLangs() {
-	return this.lands;
     }
 
     @Override
@@ -92,11 +71,6 @@ public class BasicFeod implements Feod {
     @Override
     public void setOwnerDeFacto(Persona persona) {
 	this.ownerDeFacto = persona;	
-    }
-
-    @Override
-    public Culture getDominantCulture() {
-	return this.culturesCollection.peek();
     }
 
     @Override
