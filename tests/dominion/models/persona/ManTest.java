@@ -4,7 +4,7 @@ import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
 import dominion.models.CharacteristicValue;
-import dominion.models.LimitedCharacteristicValue;
+import dominion.models.characteristic.LimitedCharacteristicValue;
 import dominion.models.culture.slavic.SlavicTreePartName;
 import dominion.models.culture.slavic.SlavonianCulture;
 import dominion.models.persona.name.FamilyName;

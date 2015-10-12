@@ -3,8 +3,8 @@ package dominion.models.persona;
 import java.util.ArrayList;
 import java.util.Map.Entry;
 
-import dominion.models.Characteristic;
 import dominion.models.CharacteristicValue;
+import dominion.models.characteristic.Characteristic;
 
 public class PersonaModList extends ArrayList<PersonaModifier> {
 

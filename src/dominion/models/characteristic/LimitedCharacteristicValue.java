@@ -1,4 +1,6 @@
-package dominion.models;
+package dominion.models.characteristic;
+
+import dominion.models.CharacteristicValue;
 
 public class LimitedCharacteristicValue implements CharacteristicValue {
 

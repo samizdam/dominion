@@ -19,6 +19,10 @@
 - Data providing for all types of names (files or database persisted). 
 
 ## Version 0.0.2 - 2015-10-XX
+### Added
+- Characteristics for Persona implementation.
+- Characteristics sub-package. 
+
 ### Changed
 - Title classes moved to sub-package. 
 - Rename PersonaNameGenerationStrategy to PersonaNameGenerator. 
