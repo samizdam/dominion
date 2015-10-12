@@ -1,5 +1,6 @@
 package dominion.models;
 
-public interface Modifier {
+
+public interface Modifier extends CharacteristicMap{
 
 }

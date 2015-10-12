@@ -1,7 +1,6 @@
 package dominion.models.persona;
 
 import java.util.Collection;
-import java.util.List;
 import java.util.PriorityQueue;
 
 import dominion.models.Date;
@@ -15,8 +14,8 @@ import dominion.models.title.Title;
 public abstract class AbstractPersona implements WellBornPersona {
     private Persona spouse;
     private Culture culture;
-    private PersonaCharacteristicCollection<PersonaCharacteristic> characteristics;
-    private List<PersonaModifier> mods;
+    private PersonaCharacteristicMap characteristics;
+    private PersonaModList mods = new PersonaModList(this);
     private Date dateOfDeath;
     private Date dateOfBirth;
     private Collection<Title> titles = new PriorityQueue<Title>();
@@ -72,11 +71,11 @@ public abstract class AbstractPersona implements WellBornPersona {
 	this.mods.add(mod);
     }
 
-    public void setCharacteristics(PersonaCharacteristicCollection<PersonaCharacteristic> characteristics) {
+    public void setCharacteristics(PersonaCharacteristicMap characteristics) {
 	this.characteristics = characteristics;
     }
     @Override
-    public PersonaCharacteristicCollection<PersonaCharacteristic> getCharacteristics() {
+    public PersonaCharacteristicMap getCharacteristics() {
 	return this.characteristics;
     }
 

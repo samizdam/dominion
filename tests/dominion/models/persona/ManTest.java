@@ -1,9 +1,10 @@
 package dominion.models.persona;
 
 import static org.mockito.Mockito.mock;
-
 import static org.mockito.Mockito.when;
 
+import dominion.models.CharacteristicValue;
+import dominion.models.LimitedCharacteristicValue;
 import dominion.models.culture.slavic.SlavicTreePartName;
 import dominion.models.culture.slavic.SlavonianCulture;
 import dominion.models.persona.name.FamilyName;
@@ -56,7 +57,21 @@ public class ManTest extends TestCase {
     
     public void testGetCharacteristics(){
 	Man man = this.createMan();
-	assertTrue(man.getCharacteristics() instanceof PersonaCharacteristicCollection);
+	assertTrue(man.getCharacteristics() instanceof PersonaCharacteristicMap);
+    }
+    
+    public void testAddModifier(){
+	Man man = this.createMan();
+	PersonaCharacteristic character = mock(PersonaCharacteristic.class);
+	CharacteristicValue backupZeroCharValue = man.getCharacteristics().get(character);
+	
+	PersonaModifier mod = new BasicModifier();
+	mod.put(character, new LimitedCharacteristicValue(character, 1));
+	man.addModifier(mod);
+	
+	CharacteristicValue actualValue = man.getCharacteristics().get(character);
+	
+	assertTrue(backupZeroCharValue.toInt() < actualValue.toInt());
     }
     
     private Man createMan() {
