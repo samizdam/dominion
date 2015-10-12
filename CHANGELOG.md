@@ -1,6 +1,6 @@
-# CHANGELOG #
+# CHANGELOG
 
-## samizdam/dominion strategy game road map ##
+## samizdam/dominion strategy game road map
 
 ### Added: for new features.
 ### Changed: for changes in existing functionality.
@@ -17,6 +17,9 @@
 - Implement de-facto and de-jure title / feods owning. 
 - Culture interfaces and related types for plugin different logic in game. 
 - Data providing for all types of names (files or database persisted). 
+
+## Unrealized 
+- Some Land implenentation.  
 
 ## Version 0.0.2 - 2015-10-XX
 ### Added

@@ -1,4 +1,6 @@
-package dominion.models;
+package dominion.models.characteristic;
+
+import dominion.models.ValueObject;
 
 public interface CharacteristicValue extends ValueObject{
 
