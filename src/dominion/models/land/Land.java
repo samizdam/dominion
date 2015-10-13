@@ -11,6 +11,8 @@ public interface Land {
     
     public Feod getDomain();
     
+    public Demos getDemos();
+    
     public LandProfit getProfit();
     
     public void addModifier(LandModifier mod);

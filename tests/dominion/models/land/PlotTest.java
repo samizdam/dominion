@@ -2,14 +2,19 @@ package dominion.models.land;
 
 import static org.mockito.Mockito.*;
 
+import dominion.models.culture.slavic.SlavonianCulture;
 import dominion.models.feod.Feod;
 import junit.framework.TestCase;
 
 public class PlotTest extends TestCase {
+    
+    private LandFactory factory = new LandFactory(new SlavonianCulture());
+    
     public void testGetName() {
 	LandName name = mock(LandName.class);
-	Land land = new Plot(name);
+	Land land = this.createLand(name);
 	assertEquals(name, land.getName());
+	
     }
     
     public void testSetDomain(){
@@ -19,8 +24,13 @@ public class PlotTest extends TestCase {
 	assertEquals(domain, land.getDomain());
     }
     
+    public void testDemos(){
+	Land land = this.createLand();
+	assertEquals(12, land.getDemos().count());
+    }
+    
     private Land createLand(LandName name){
-	return new Plot(name);	
+	return this.factory.createLand(name);	
     }
     
     private Land createLand(){
