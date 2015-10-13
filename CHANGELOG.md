@@ -18,13 +18,14 @@
 - Culture interfaces and related types for plugin different logic in game. 
 - Data providing for all types of names (files or database persisted). 
 
-## Unrealized 
-- Some Land implenentation.  
+## Unrealized   
 
 ## Version 0.0.2 - 2015-10-XX
 ### Added
 - Characteristics for Persona implementation.
-- Characteristics sub-package. 
+- Characteristics sub-package.
+- Plot class as some Land implenentation.
+- Basic Demography in Lands: number of peoples by genders. 
 
 ### Changed
 - Title classes moved to sub-package. 

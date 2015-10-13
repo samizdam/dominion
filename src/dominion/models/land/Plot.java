@@ -7,9 +7,11 @@ public class Plot implements Land{
 
     private LandName name;
     private Feod domain;
+    private Demos demos;
 
-    public Plot(LandName name){
+    Plot(LandName name, Demos demos){
 	this.name = name;
+	this.demos = demos;
     }
     @Override
     public LandName getName() {
@@ -43,6 +45,10 @@ public class Plot implements Land{
     public Culture getDominantCulture() {
 	// TODO Auto-generated method stub
 	return null;
+    }
+    @Override
+    public Demos getDemos() {
+	return this.demos ;
     }
 
 }
