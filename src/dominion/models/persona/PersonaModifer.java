@@ -2,5 +2,6 @@ package dominion.models.persona;
 
 import dominion.models.characteristic.Modifier;
 
-public interface PersonaModifier extends Modifier{
+public interface PersonaModifer extends Modifier {
+
 }

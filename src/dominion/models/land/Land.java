@@ -1,6 +1,6 @@
 package dominion.models.land;
 
-import dominion.models.Culture;
+import dominion.models.culture.Culture;
 import dominion.models.feod.Feod;
 
 public interface Land {

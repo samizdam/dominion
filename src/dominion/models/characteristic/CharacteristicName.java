@@ -1,4 +1,4 @@
-package dominion.models.persona;
+package dominion.models.characteristic;
 
 import dominion.models.Name;
 

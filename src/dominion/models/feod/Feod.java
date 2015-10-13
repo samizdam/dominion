@@ -2,12 +2,12 @@ package dominion.models.feod;
 
 import java.util.List;
 
-import dominion.models.Culture;
 import dominion.models.Name;
 import dominion.models.Profit;
-import dominion.models.Title;
+import dominion.models.culture.Culture;
 import dominion.models.land.Land;
 import dominion.models.persona.*;
+import dominion.models.title.Title;
 
 public interface Feod {
     
@@ -30,6 +30,8 @@ public interface Feod {
     public boolean isSovereign();
     
     public void setParentFeod(Feod feod);
+    
+    public Feod getParentFeod();
     
     public Persona getOwnerDeFacto();
     

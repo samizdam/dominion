@@ -6,5 +6,5 @@ package dominion.models;
  *
  */
 public interface Name {
-    
+    public String toString();
 }

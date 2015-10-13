@@ -1,9 +1,13 @@
 package dominion.models.persona;
 
+import dominion.models.Date;
+
 public class Man extends AbstractPersona {
 
-    @Override
-    public Gender getGender() {
-	return Gender.male;
+    Man(Man father, Woman mother, Date dateOfBirth) {
+	super(father, mother, dateOfBirth);
+	this.gender = Gender.male;
     }
+
+
 }
