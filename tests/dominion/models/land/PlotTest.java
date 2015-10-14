@@ -1,14 +1,10 @@
 package dominion.models.land;
 
-import static org.mockito.Mockito.*;
+import static org.mockito.Mockito.mock;
 
 import dominion.models.culture.slavic.SlavonianCulture;
 import dominion.models.events.EventsCollection;
 import dominion.models.feod.Feod;
-import dominion.models.land.resources.BaseResource;
-import dominion.models.land.resources.BaseResourceMap;
-import dominion.models.land.resources.ResourceMap;
-import dominion.models.land.resources.ResourceType;
 import junit.framework.TestCase;
 
 public class PlotTest extends TestCase {
@@ -41,14 +37,7 @@ public class PlotTest extends TestCase {
     
     public void testAddModifier(){
 	Land land = this.createLand();
-	
 	LandModifier mod = new MergeProfitModifier();
-	LandProfit landProfit = mock(LandProfit.class);
-	ResourceMap resources = new BaseResourceMap();
-	resources.add(new BaseResource(ResourceType.money, 100));
-	
-	when(landProfit.getResources()).thenReturn(resources);
-	
 	assertTrue(land.addModifier(mod) instanceof EventsCollection);
     }
     
