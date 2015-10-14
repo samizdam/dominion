@@ -1,7 +1,10 @@
 package dominion.models.land;
 
 import dominion.models.culture.Culture;
+import dominion.models.events.EventsCollection;
 import dominion.models.feod.Feod;
+import dominion.models.land.resources.Resource;
+import dominion.models.land.resources.ResourceType;
 
 public interface Land {
     

@@ -1,5 +1,7 @@
 package dominion.models.land;
 
+import dominion.models.land.resources.ResourceMap;
+
 public class BaseProfit implements LandProfit {
 
     Land land;

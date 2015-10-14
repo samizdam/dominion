@@ -1,8 +1,6 @@
-package dominion.models.land;
+package dominion.models.events;
 
 import java.util.Collection;
-
-import dominion.models.Event;
 
 public interface EventsCollection extends Collection<Event>{
 

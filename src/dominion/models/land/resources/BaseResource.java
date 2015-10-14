@@ -1,5 +1,4 @@
-package dominion.models.land;
-
+package dominion.models.land.resources;
 
 public class BaseResource implements Resource {
 

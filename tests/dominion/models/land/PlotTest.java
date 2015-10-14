@@ -3,7 +3,12 @@ package dominion.models.land;
 import static org.mockito.Mockito.*;
 
 import dominion.models.culture.slavic.SlavonianCulture;
+import dominion.models.events.EventsCollection;
 import dominion.models.feod.Feod;
+import dominion.models.land.resources.BaseResource;
+import dominion.models.land.resources.BaseResourceMap;
+import dominion.models.land.resources.ResourceMap;
+import dominion.models.land.resources.ResourceType;
 import junit.framework.TestCase;
 
 public class PlotTest extends TestCase {

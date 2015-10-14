@@ -1,4 +1,4 @@
-package dominion.models.land;
+package dominion.models.land.resources;
 
 
 public interface Resource {
