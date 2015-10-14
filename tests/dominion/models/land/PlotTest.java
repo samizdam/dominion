@@ -3,7 +3,7 @@ package dominion.models.land;
 import static org.mockito.Mockito.mock;
 
 import dominion.models.culture.slavic.SlavonianCulture;
-import dominion.models.events.EventsCollection;
+import dominion.models.event.EventsCollection;
 import dominion.models.feod.Feod;
 import junit.framework.TestCase;
 

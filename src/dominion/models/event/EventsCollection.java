@@ -1,4 +1,4 @@
-package dominion.models.events;
+package dominion.models.event;
 
 import java.util.Collection;
 

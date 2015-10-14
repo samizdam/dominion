@@ -3,7 +3,7 @@ package dominion.models.land;
 import dominion.models.BaseEventCollection;
 import dominion.models.characteristic.Characteristic;
 import dominion.models.characteristic.CharacteristicValue;
-import dominion.models.events.EventsCollection;
+import dominion.models.event.EventsCollection;
 
 public class MergeProfitModifier extends AbstractProfitModifier {
 

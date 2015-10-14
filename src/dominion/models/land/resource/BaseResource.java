@@ -1,4 +1,4 @@
-package dominion.models.land.resources;
+package dominion.models.land.resource;
 
 public class BaseResource implements Resource {
 
@@ -37,13 +37,9 @@ public class BaseResource implements Resource {
 
     @Override
     public Resource merge(Resource resource) {
-	// TODO Auto-generated method stub
-	return null;
+	int newValue = resource.toInt() + this.intValue;
+	return new BaseResource(this.type, newValue);
     }
 
-//    @Override
-//    public CharacteristicValue merge(CharacteristicValue value) {
-//	return value.merge(this);
-//    }
 
 }

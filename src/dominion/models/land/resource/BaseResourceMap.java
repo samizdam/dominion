@@ -1,4 +1,4 @@
-package dominion.models.land.resources;
+package dominion.models.land.resource;
 
 import java.util.HashMap;
 

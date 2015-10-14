@@ -2,8 +2,8 @@ package dominion.models;
 
 import java.util.PriorityQueue;
 
-import dominion.models.events.Event;
-import dominion.models.events.EventsCollection;
+import dominion.models.event.Event;
+import dominion.models.event.EventsCollection;
 import dominion.models.land.LandModifierApplied;
 
 public class BaseEventCollection extends PriorityQueue<Event> implements EventsCollection {

@@ -1,6 +1,6 @@
 package dominion.models.land;
 
-import dominion.models.events.Event;
+import dominion.models.event.Event;
 
 public class LandModifierApplied implements Event {
 

@@ -1,7 +1,7 @@
 package dominion.models.land;
 
 import dominion.models.characteristic.Modifier;
-import dominion.models.events.EventsCollection;
+import dominion.models.event.EventsCollection;
 
 public interface LandModifier extends Modifier{
     

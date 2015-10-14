@@ -1,12 +1,12 @@
 package dominion.models.land;
 
 import dominion.models.culture.Culture;
-import dominion.models.events.EventsCollection;
+import dominion.models.event.EventsCollection;
 import dominion.models.feod.Feod;
-import dominion.models.land.resources.BaseResourceMap;
-import dominion.models.land.resources.Resource;
-import dominion.models.land.resources.ResourceMap;
-import dominion.models.land.resources.ResourceType;
+import dominion.models.land.resource.BaseResourceMap;
+import dominion.models.land.resource.Resource;
+import dominion.models.land.resource.ResourceMap;
+import dominion.models.land.resource.ResourceType;
 
 public class Plot implements Land{
 
