@@ -29,6 +29,24 @@ public class PlotTest extends TestCase {
 	assertEquals(12, land.getDemos().count());
     }
     
+    public void testGetProfit(){
+	Land land = this.createLand();
+	assertTrue(land.getProfit() instanceof LandProfit);
+    }
+    
+    public void testAddModifier(){
+	Land land = this.createLand();
+	
+	LandModifier mod = new MergeProfitModifier();
+	LandProfit landProfit = mock(LandProfit.class);
+	ResourceMap resources = new BaseResourceMap();
+	resources.add(new BaseResource(ResourceType.money, 100));
+	
+	when(landProfit.getResources()).thenReturn(resources);
+	
+	assertTrue(land.addModifier(mod) instanceof EventsCollection);
+    }
+    
     private Land createLand(LandName name){
 	return this.factory.createLand(name);	
     }

@@ -15,8 +15,10 @@ public interface Land {
     
     public LandProfit getProfit();
     
-    public void addModifier(LandModifier mod);
+    public EventsCollection addModifier(LandModifier mod);
     
     public Culture getDominantCulture();
+
+    public Resource getResource(ResourceType type);
     
 }

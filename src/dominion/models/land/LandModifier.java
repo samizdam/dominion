@@ -5,4 +5,6 @@ import dominion.models.characteristic.Modifier;
 public interface LandModifier extends Modifier{
     
     public LandProfit getProfit();
+
+    public EventsCollection apply(Plot plot);
 }

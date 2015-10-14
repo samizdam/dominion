@@ -4,6 +4,7 @@ public class LimitedCharacteristicValue implements CharacteristicValue {
 
     private Characteristic characteristic;
     private int value = 0;
+    private short limit = 100;
 
     public LimitedCharacteristicValue(Characteristic characteristic) {
 	this.characteristic = characteristic;
@@ -23,6 +24,9 @@ public class LimitedCharacteristicValue implements CharacteristicValue {
     public CharacteristicValue merge(CharacteristicValue value) {
 	int oldValue = this.toInt();
 	int newValue = oldValue + value.toInt();
+	if(newValue >= this.limit){
+	    newValue = this.limit;
+	}
 	return new LimitedCharacteristicValue(this.characteristic, newValue);
     }
 
