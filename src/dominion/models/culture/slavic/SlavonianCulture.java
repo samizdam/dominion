@@ -9,6 +9,11 @@ import dominion.models.land.LandNameGenerator;
 import dominion.models.persona.CharacteristicGenerator;
 import dominion.models.persona.name.PersonaNameGenerator;
 
+/**
+ * TODO extract from here to standalone mod. (top-level package or project). 
+ * @author samizdam
+ *
+ */
 public class SlavonianCulture implements Culture {
 
     private PersonaNameGenerator nameGenerator = new RandomSlavicStrategy();

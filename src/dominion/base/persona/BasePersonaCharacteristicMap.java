@@ -7,7 +7,7 @@ import dominion.models.characteristic.Characteristic;
 import dominion.models.characteristic.CharacteristicValue;
 import dominion.models.persona.PersonaCharacteristicMap;
 
-public class BasePersonaCharacteristicMap extends HashMap<Characteristic, CharacteristicValue>
+class BasePersonaCharacteristicMap extends HashMap<Characteristic, CharacteristicValue>
 	implements PersonaCharacteristicMap {
 
     /**

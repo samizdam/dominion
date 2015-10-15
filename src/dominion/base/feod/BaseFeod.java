@@ -10,12 +10,13 @@ import dominion.models.feod.FeodName;
 import dominion.models.persona.Persona;
 import dominion.models.title.Title;
 
-public class BaseFeod extends AbstractFeod {
+class BaseFeod extends AbstractFeod {
 
     BaseFeod(FeodName name) {
 	super(name);
     }
-    
+
+
     private Profit profit;
     private List<Feod> subDomains = new ArrayList<Feod>();
     private Title title;

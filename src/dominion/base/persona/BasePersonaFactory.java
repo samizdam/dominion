@@ -5,7 +5,7 @@ import dominion.models.culture.Culture;
 import dominion.models.persona.CharacteristicGenerator;
 import dominion.models.persona.name.PersonaNameGenerator;
 
-public class PersonaFactory {
+class BasePersonaFactory {
     
     private Culture culture;
     
@@ -13,7 +13,7 @@ public class PersonaFactory {
     private CharacteristicGenerator characteristicGenerator;
     
     
-    public PersonaFactory(Culture culture) {
+    public BasePersonaFactory(Culture culture) {
 	this.culture = culture;
 	this.setNameGenerator(culture.getPersonaNameGenerator());
 	this.setCharacteristicGenerator(culture.getPersonaCharacteristicGenerator());	

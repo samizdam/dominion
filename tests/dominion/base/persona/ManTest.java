@@ -5,7 +5,7 @@ import static org.mockito.Mockito.when;
 
 import dominion.base.characteristic.LimitedCharacteristicValue;
 import dominion.base.persona.Man;
-import dominion.base.persona.PersonaFactory;
+import dominion.base.persona.BasePersonaFactory;
 import dominion.base.persona.Woman;
 import dominion.base.persona.name.FamilyName;
 import dominion.base.persona.name.FirstName;
@@ -22,7 +22,7 @@ import junit.framework.TestCase;
 
 public class ManTest extends TestCase {
 
-    private PersonaFactory personaFactory = new PersonaFactory(new SlavonianCulture());
+    private BasePersonaFactory personaFactory = new BasePersonaFactory(new SlavonianCulture());
     
     public void testGetGender() {
 	Man man = this.createMan();
