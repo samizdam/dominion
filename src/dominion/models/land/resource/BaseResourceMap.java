@@ -22,7 +22,6 @@ public class BaseResourceMap extends HashMap<ResourceType, Resource> implements 
     }
 
     public Resource get(ResourceType type){
-	System.out.println(type);
 	if(!this.containsKey(type)){
 	    this.add(new BaseResource(type));
 	}
