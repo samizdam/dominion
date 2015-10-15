@@ -2,7 +2,7 @@ package dominion.models.land.resource;
 
 import java.util.HashMap;
 
-public class BaseResourceMap extends HashMap<ResourceType, Resource>implements ResourceMap {
+public class BaseResourceMap extends HashMap<ResourceType, Resource> implements ResourceMap {
 
     /**
      * 
@@ -16,10 +16,13 @@ public class BaseResourceMap extends HashMap<ResourceType, Resource>implements R
 	    Resource currentValue = this.get(type);
 	    Resource newValue = resource.merge(currentValue);
 	    this.put(type, newValue);
+	} else {
+	    this.put(type, resource);
 	}
     }
 
     public Resource get(ResourceType type){
+	System.out.println(type);
 	if(!this.containsKey(type)){
 	    this.add(new BaseResource(type));
 	}
