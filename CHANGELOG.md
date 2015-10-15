@@ -9,20 +9,36 @@
 ### Fixed: for any bug fixes.
 ### Security: to invite users to upgrade in case of vulnerabilities.
 
-## Milestone 1
+## Road Map
+If current section will be too long, move to wiki on bitbucket. 
+
+### Milestone 2
+- Gui: client-server (rest + html) or single player desktop app.
+- Think about multi-player. 
+- Landscape conception development and introduce. 
+- Add some user documentation. 
+- Persistance. 
+
+### Milestone 1
 - Add Land demography and other profit characteristics. 
 - Profit composite calculation for Feods from Lands. 
 - Some Modifier implementations for change profit.  
 - Normalize persons factoring and inheritance. 	
 - Implement de-facto and de-jure title / feods owning. 
-+ Culture interfaces and related types for plugin different logic in game. 
+-/+ Culture interfaces and related types for plugin different logic in game. 
 - Data providing for all types of names (files or database persisted). 
+- Have some concept documentation.
+- Think about issue / bug tracking system. See CI tools. 
+- Think about license and open source. 
+- Run application with some simple user interface CLI (not a full functional).   
 
 ## Unrealized   
 - Demography Modifiers for Lands.
-- Replace Enums in models with Interfaces, use existing enums to package, m.b.  
+- Replace Enums in models with Interfaces, use existing enums to package, m.b.
+- Titles and Ranges implementation. 
+- Mark actual progress on dia.   
 
-## Version 0.1.0 - 2015-10-XX
+## Version 0.1.0 - 2015-10-16
 ### Added
 - Characteristics for Persona implementation.
 - Characteristics sub-package.
