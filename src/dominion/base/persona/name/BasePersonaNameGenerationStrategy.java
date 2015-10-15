@@ -4,7 +4,7 @@ import dominion.models.culture.slavic.RandomSlavicStrategy;
 import dominion.models.persona.name.PersonaNameGenerationStrategyFactory;
 import dominion.models.persona.name.PersonaNameGenerator;
 
-public class DefaultPersonaNameGenerationStrategy implements PersonaNameGenerationStrategyFactory {
+public class BasePersonaNameGenerationStrategy implements PersonaNameGenerationStrategyFactory {
 
     private PersonaNameGenerator strategy = new RandomSlavicStrategy(); 
     @Override

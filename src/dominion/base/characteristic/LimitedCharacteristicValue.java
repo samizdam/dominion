@@ -3,6 +3,11 @@ package dominion.base.characteristic;
 import dominion.models.characteristic.Characteristic;
 import dominion.models.characteristic.CharacteristicValue;
 
+/**
+ * TODO extract from base to mod package. Replace with native package implentation: without some limits and other custom properties.    
+ * @author samizdam
+ *
+ */
 public class LimitedCharacteristicValue implements CharacteristicValue {
 
     private Characteristic characteristic;

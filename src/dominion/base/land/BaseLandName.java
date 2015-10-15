@@ -2,11 +2,11 @@ package dominion.base.land;
 
 import dominion.models.land.LandName;
 
-public class RegularLandName implements LandName {
+public class BaseLandName implements LandName {
 
     private String stringValue;
 
-    public RegularLandName(String string) {
+    public BaseLandName(String string) {
 	this.stringValue = string;
     }
 

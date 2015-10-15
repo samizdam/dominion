@@ -8,6 +8,11 @@ import dominion.models.land.Land;
 import dominion.models.persona.Persona;
 import dominion.models.title.Title;
 
+/**
+ * TODO: move to mod? 
+ * @author samizdam
+ *
+ */
 public class FreeFeod extends AbstractFeod{
 
     public FreeFeod(Land land) {

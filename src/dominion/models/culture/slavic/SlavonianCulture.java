@@ -9,7 +9,7 @@ import dominion.models.persona.name.PersonaNameGenerator;
 public class SlavonianCulture implements Culture {
 
     private PersonaNameGenerator nameGenerator = new RandomSlavicStrategy();
-    private CharacteristicGenerator personaCharacteristicGenerator = new DefaultPersonaCharacteristicGenerator();
+    private CharacteristicGenerator personaCharacteristicGenerator = new BasePersonaCharacteristicGenerator();
     private LandNameGenerator landNameGenerator = new DefaultSlavicLandNameGenerator(new HardcodedSlavicLandNameRepository());
     private DemosGenerator demosGenerator = new DozenDemosGenerator();
 

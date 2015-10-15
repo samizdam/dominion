@@ -15,14 +15,14 @@
 - Some Modifier implementations for change profit.  
 - Normalize persons factoring and inheritance. 	
 - Implement de-facto and de-jure title / feods owning. 
-- Culture interfaces and related types for plugin different logic in game. 
++ Culture interfaces and related types for plugin different logic in game. 
 - Data providing for all types of names (files or database persisted). 
 
 ## Unrealized   
 - Demography Modifiers for Lands.
-- Put all interfaces as separetly for implenent all domain code as plugins only, and core-code (application) as platform.  
+- Replace Enums in models with Interfaces, use existing enums to package, m.b.  
 
-## Version 0.0.2 - 2015-10-XX
+## Version 0.1.0 - 2015-10-XX
 ### Added
 - Characteristics for Persona implementation.
 - Characteristics sub-package.
@@ -30,6 +30,7 @@
 - Basic Demography in Lands: number of peoples by genders. 
 
 ### Changed
+- Put all interfaces as separetly for implenent all domain code as plugins only, and core-code (application) as platform. Base package added. 
 - Title classes moved to sub-package. 
 - Rename PersonaNameGenerationStrategy to PersonaNameGenerator. 
 - Rename UnknowPersona to UnknownPersona. 

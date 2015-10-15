@@ -5,7 +5,7 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
-import dominion.base.land.RegularLandName;
+import dominion.base.land.BaseLandName;
 import dominion.models.land.LandName;
 
 public class HardcodedSlavicLandNameRepository implements LandNameRepository {
@@ -21,7 +21,7 @@ public class HardcodedSlavicLandNameRepository implements LandNameRepository {
     @Override
     public LandName getRangomName() {
 	Collections.shuffle(this.list);
-	return new RegularLandName(this.list.get(1));
+	return new BaseLandName(this.list.get(1));
     }
 
 }
