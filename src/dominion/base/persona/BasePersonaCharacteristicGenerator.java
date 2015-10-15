@@ -1,6 +1,5 @@
-package dominion.models.culture.slavic;
+package dominion.base.persona;
 
-import dominion.base.persona.Man;
 import dominion.models.persona.CharacteristicGenerator;
 import dominion.models.persona.PersonaCharacteristicMap;
 

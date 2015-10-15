@@ -1,4 +1,4 @@
-package dominion.models.culture.slavic;
+package dominion.base.persona;
 
 import java.util.HashMap;
 

@@ -1,15 +1,16 @@
-package dominion.models.culture.slavic;
+package dominion.base.land;
 
 import dominion.models.land.LandName;
 import dominion.models.land.LandNameGenerator;
+import dominion.models.land.LandNameRepository;
 
-public class DefaultSlavicLandNameGenerator implements LandNameGenerator {
+public class BaseLandNameGenerator implements LandNameGenerator {
 
     
     
     private LandNameRepository repo;
     
-    public DefaultSlavicLandNameGenerator(LandNameRepository repo) {
+    public BaseLandNameGenerator(LandNameRepository repo) {
 	this.repo = repo;
     }
     @Override

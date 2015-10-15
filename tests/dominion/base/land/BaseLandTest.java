@@ -31,7 +31,7 @@ public class BaseLandTest extends TestCase {
     
     public void testDemos(){
 	Land land = this.createLand();
-	assertEquals(12, land.getDemos().count());
+	assertEquals(10, land.getDemos().count());
     }
     
     public void testGetProfit(){

@@ -7,6 +7,7 @@ import java.util.List;
 
 import dominion.base.land.BaseLandName;
 import dominion.models.land.LandName;
+import dominion.models.land.LandNameRepository;
 
 public class HardcodedSlavicLandNameRepository implements LandNameRepository {
 

@@ -6,6 +6,9 @@ import dominion.models.persona.name.PersonaNameGenerator;
 
 public class BasePersonaNameGenerationStrategy implements PersonaNameGenerationStrategyFactory {
 
+    /**
+     * Replace with some default implementation. 
+     */
     private PersonaNameGenerator strategy = new RandomSlavicStrategy(); 
     @Override
     public PersonaNameGenerator getSrategy() {
