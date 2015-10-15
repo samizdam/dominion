@@ -1,13 +1,20 @@
 package dominion.models.land;
 
 import dominion.models.culture.Culture;
+import dominion.models.event.EventsCollection;
 import dominion.models.feod.Feod;
+import dominion.models.land.resource.BaseResourceMap;
+import dominion.models.land.resource.Resource;
+import dominion.models.land.resource.ResourceMap;
+import dominion.models.land.resource.ResourceType;
 
 public class Plot implements Land{
 
     private LandName name;
     private Feod domain;
     private Demos demos;
+    private LandProfit profit = new BaseProfit(this);
+    private ResourceMap resourceMap = new BaseResourceMap();
 
     Plot(LandName name, Demos demos){
 	this.name = name;
@@ -31,14 +38,12 @@ public class Plot implements Land{
 
     @Override
     public LandProfit getProfit() {
-	// TODO Auto-generated method stub
-	return null;
+	return this.profit ;
     }
 
     @Override
-    public void addModifier(LandModifier mod) {
-	// TODO Auto-generated method stub
-	
+    public EventsCollection addModifier(LandModifier mod) {
+	return mod.apply(this);	
     }
 
     @Override
@@ -49,6 +54,10 @@ public class Plot implements Land{
     @Override
     public Demos getDemos() {
 	return this.demos ;
+    }
+    @Override
+    public Resource getResource(ResourceType type) {
+	return this.resourceMap.get(type);
     }
 
 }

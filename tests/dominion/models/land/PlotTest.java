@@ -1,8 +1,9 @@
 package dominion.models.land;
 
-import static org.mockito.Mockito.*;
+import static org.mockito.Mockito.mock;
 
 import dominion.models.culture.slavic.SlavonianCulture;
+import dominion.models.event.EventsCollection;
 import dominion.models.feod.Feod;
 import junit.framework.TestCase;
 
@@ -27,6 +28,17 @@ public class PlotTest extends TestCase {
     public void testDemos(){
 	Land land = this.createLand();
 	assertEquals(12, land.getDemos().count());
+    }
+    
+    public void testGetProfit(){
+	Land land = this.createLand();
+	assertTrue(land.getProfit() instanceof LandProfit);
+    }
+    
+    public void testAddModifier(){
+	Land land = this.createLand();
+	LandModifier mod = new MergeProfitModifier();
+	assertTrue(land.addModifier(mod) instanceof EventsCollection);
     }
     
     private Land createLand(LandName name){

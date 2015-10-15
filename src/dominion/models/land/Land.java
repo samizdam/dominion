@@ -1,7 +1,10 @@
 package dominion.models.land;
 
 import dominion.models.culture.Culture;
+import dominion.models.event.EventsCollection;
 import dominion.models.feod.Feod;
+import dominion.models.land.resource.Resource;
+import dominion.models.land.resource.ResourceType;
 
 public interface Land {
     
@@ -15,8 +18,10 @@ public interface Land {
     
     public LandProfit getProfit();
     
-    public void addModifier(LandModifier mod);
+    public EventsCollection addModifier(LandModifier mod);
     
     public Culture getDominantCulture();
+
+    public Resource getResource(ResourceType type);
     
 }
