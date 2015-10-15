@@ -10,9 +10,9 @@ import dominion.models.feod.FeodName;
 import dominion.models.persona.Persona;
 import dominion.models.title.Title;
 
-public class BasicFeod extends AbstractFeod {
+public class BaseFeod extends AbstractFeod {
 
-    BasicFeod(FeodName name) {
+    BaseFeod(FeodName name) {
 	super(name);
     }
     

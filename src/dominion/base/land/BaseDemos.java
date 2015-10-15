@@ -2,7 +2,7 @@ package dominion.base.land;
 
 import dominion.models.land.Demos;
 
-public class RegularDemos implements Demos {
+public class BaseDemos implements Demos {
 
     private int mans = 0;
     private int womans = 0;

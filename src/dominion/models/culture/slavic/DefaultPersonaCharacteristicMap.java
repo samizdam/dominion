@@ -3,9 +3,9 @@ package dominion.models.culture.slavic;
 import java.util.HashMap;
 
 import dominion.base.characteristic.LimitedCharacteristicValue;
-import dominion.base.persona.PersonaCharacteristicMap;
 import dominion.models.characteristic.Characteristic;
 import dominion.models.characteristic.CharacteristicValue;
+import dominion.models.persona.PersonaCharacteristicMap;
 
 public class DefaultPersonaCharacteristicMap extends HashMap<Characteristic, CharacteristicValue>
 	implements PersonaCharacteristicMap {

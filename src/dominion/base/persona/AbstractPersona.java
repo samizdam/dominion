@@ -9,6 +9,7 @@ import dominion.models.culture.Culture;
 import dominion.models.feod.Feod;
 import dominion.models.persona.Gender;
 import dominion.models.persona.Persona;
+import dominion.models.persona.PersonaCharacteristicMap;
 import dominion.models.persona.PersonaModifier;
 import dominion.models.persona.WellBornPersona;
 import dominion.models.persona.name.PersonaName;

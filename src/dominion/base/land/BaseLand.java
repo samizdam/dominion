@@ -13,7 +13,7 @@ import dominion.models.land.resource.Resource;
 import dominion.models.land.resource.ResourceMap;
 import dominion.models.land.resource.ResourceType;
 
-public class Plot implements Land{
+public class BaseLand implements Land{
 
     private LandName name;
     private Feod domain;
@@ -21,7 +21,7 @@ public class Plot implements Land{
     private LandProfit profit = new BaseProfit(this);
     private ResourceMap resourceMap = new BaseResourceMap();
 
-    Plot(LandName name, Demos demos){
+    BaseLand(LandName name, Demos demos){
 	this.name = name;
 	this.demos = demos;
     }

@@ -5,7 +5,6 @@ import static org.mockito.Mockito.when;
 
 import dominion.base.characteristic.LimitedCharacteristicValue;
 import dominion.base.persona.Man;
-import dominion.base.persona.PersonaCharacteristicMap;
 import dominion.base.persona.PersonaFactory;
 import dominion.base.persona.Woman;
 import dominion.base.persona.name.FamilyName;
@@ -17,6 +16,7 @@ import dominion.models.culture.slavic.SlavonianCulture;
 import dominion.models.persona.Gender;
 import dominion.models.persona.Persona;
 import dominion.models.persona.PersonaCharacteristic;
+import dominion.models.persona.PersonaCharacteristicMap;
 import dominion.models.persona.PersonaModifier;
 import junit.framework.TestCase;
 
@@ -73,7 +73,7 @@ public class ManTest extends TestCase {
 	PersonaCharacteristic character = mock(PersonaCharacteristic.class);
 	CharacteristicValue backupZeroCharValue = man.getCharacteristics().get(character);
 	
-	PersonaModifier mod = new BasicModifier();
+	PersonaModifier mod = new BaseModifier();
 	mod.put(character, new LimitedCharacteristicValue(character, 1));
 	man.addModifier(mod);
 	

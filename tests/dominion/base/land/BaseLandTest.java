@@ -11,7 +11,7 @@ import dominion.models.land.LandName;
 import dominion.models.land.LandProfit;
 import junit.framework.TestCase;
 
-public class PlotTest extends TestCase {
+public class BaseLandTest extends TestCase {
     
     private LandFactory factory = new LandFactory(new SlavonianCulture());
     

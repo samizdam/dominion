@@ -23,12 +23,12 @@ public class LandFactory {
     
     public Land createLand(LandName name){
 	Demos demos = culture.getDemosGenerator().generate();
-	return new Plot(name, demos);
+	return new BaseLand(name, demos);
     }
 
     public Land createLand(Culture culture) {
 	LandName name = culture.getLandNameGenerator().generate();
 	Demos demos = culture.getDemosGenerator().generate();
-	return new Plot(name, demos);
+	return new BaseLand(name, demos);
     }
 }

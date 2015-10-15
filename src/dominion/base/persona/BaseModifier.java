@@ -6,7 +6,7 @@ import dominion.models.characteristic.Characteristic;
 import dominion.models.characteristic.CharacteristicValue;
 import dominion.models.persona.PersonaModifier;
 
-public class BasicModifier extends HashMap<Characteristic, CharacteristicValue> implements PersonaModifier {
+public class BaseModifier extends HashMap<Characteristic, CharacteristicValue> implements PersonaModifier {
 
     /**
      * 

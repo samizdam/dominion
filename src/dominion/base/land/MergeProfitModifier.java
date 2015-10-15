@@ -20,7 +20,7 @@ public class MergeProfitModifier extends AbstractProfitModifier {
     }
 
     @Override
-    public EventsCollection apply(Plot plot) {
+    public EventsCollection apply(BaseLand plot) {
 	return new BaseEventCollection(new LandModifierApplied());
     }
 

@@ -5,6 +5,7 @@ import java.util.Map.Entry;
 
 import dominion.models.characteristic.Characteristic;
 import dominion.models.characteristic.CharacteristicValue;
+import dominion.models.persona.PersonaCharacteristicMap;
 import dominion.models.persona.PersonaModifier;
 import dominion.models.persona.WellBornPersona;
 
