@@ -1,8 +1,8 @@
 package dominion.models.culture.slavic;
 
+import dominion.base.land.RegularDemos;
 import dominion.models.land.Demos;
 import dominion.models.land.DemosGenerator;
-import dominion.models.land.RegularDemos;
 
 public class DozenDemosGenerator implements DemosGenerator {
 

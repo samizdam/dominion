@@ -5,8 +5,8 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
+import dominion.base.land.RegularLandName;
 import dominion.models.land.LandName;
-import dominion.models.land.RegularLandName;
 
 public class HardcodedSlavicLandNameRepository implements LandNameRepository {
 

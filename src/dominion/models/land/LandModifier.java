@@ -1,5 +1,6 @@
 package dominion.models.land;
 
+import dominion.base.land.Plot;
 import dominion.models.characteristic.Modifier;
 import dominion.models.event.EventsCollection;
 

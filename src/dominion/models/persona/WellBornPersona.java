@@ -2,6 +2,7 @@ package dominion.models.persona;
 
 import java.util.Collection;
 
+import dominion.base.persona.PersonaCharacteristicMap;
 import dominion.models.Date;
 import dominion.models.culture.Culture;
 import dominion.models.feod.Feod;

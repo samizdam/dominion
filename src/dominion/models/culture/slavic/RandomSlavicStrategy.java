@@ -1,11 +1,11 @@
 package dominion.models.culture.slavic;
 
-import dominion.models.persona.Man;
+import dominion.base.persona.Man;
+import dominion.base.persona.name.FamilyName;
+import dominion.base.persona.name.FirstName;
+import dominion.base.persona.name.Patronym;
 import dominion.models.persona.WellBornPersona;
-import dominion.models.persona.name.FamilyName;
-import dominion.models.persona.name.FirstName;
 import dominion.models.persona.name.FirstNameRepository;
-import dominion.models.persona.name.Patronym;
 import dominion.models.persona.name.PersonaName;
 import dominion.models.persona.name.PersonaNameGenerator;
 
