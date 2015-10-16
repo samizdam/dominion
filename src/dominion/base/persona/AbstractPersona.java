@@ -27,10 +27,10 @@ public abstract class AbstractPersona implements WellBornPersona {
     private Collection<Feod> feods = new PriorityQueue<Feod>();
     private PersonaName name;
     private Man father;
-    private Woman mother;
+    private BaseWoman mother;
     protected Gender gender;
 
-    protected AbstractPersona(Man father, Woman mother, Date dateOfBirth){
+    protected AbstractPersona(Man father, BaseWoman mother, Date dateOfBirth){
 	this.father = father;
 	this.mother = mother;
 	this.dateOfBirth = dateOfBirth;
@@ -112,7 +112,7 @@ public abstract class AbstractPersona implements WellBornPersona {
 	return this.father;
     }
 
-    public Woman getMother() {
+    public BaseWoman getMother() {
 	return this.mother;
     }
     

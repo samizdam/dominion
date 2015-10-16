@@ -3,9 +3,11 @@ package dominion.base.persona;
 import dominion.base.PastDate;
 import dominion.models.culture.Culture;
 import dominion.models.persona.CharacteristicGenerator;
+import dominion.models.persona.PersonaFactory;
+import dominion.models.persona.Woman;
 import dominion.models.persona.name.PersonaNameGenerator;
 
-class BasePersonaFactory {
+class BasePersonaFactory implements PersonaFactory {
     
     private Culture culture;
     
@@ -19,27 +21,47 @@ class BasePersonaFactory {
 	this.setCharacteristicGenerator(culture.getPersonaCharacteristicGenerator());	
     }
 
+    /* (non-Javadoc)
+     * @see dominion.base.persona.PersonaFactory#setNameGenerator(dominion.models.persona.name.PersonaNameGenerator)
+     */
+    @Override
     public void setNameGenerator(PersonaNameGenerator nameGenerator){
 	this.nameGenerator = nameGenerator;
     }
     
+    /* (non-Javadoc)
+     * @see dominion.base.persona.PersonaFactory#setCharacteristicGenerator(dominion.models.persona.CharacteristicGenerator)
+     */
+    @Override
     public void setCharacteristicGenerator(CharacteristicGenerator characteristicGenerator){
 	this.characteristicGenerator = characteristicGenerator;
     }
     
-    public Man createMan(Man father, Woman mother){
+    /* (non-Javadoc)
+     * @see dominion.base.persona.PersonaFactory#createMan(dominion.base.persona.Man, dominion.base.persona.Woman)
+     */
+    @Override
+    public Man createMan(Man father, BaseWoman mother){
 	Man man = new Man(father, mother, new PastDate());
 	man.setName(this.nameGenerator.generateName(man));
 	man.setCharacteristics(this.characteristicGenerator.generateCollection(man));
 	return man;
     }
     
-    public Woman createWoman(Man father, Woman mother){
-	Woman woman = new Woman(father, mother, new PastDate()); 
+    /* (non-Javadoc)
+     * @see dominion.base.persona.PersonaFactory#createWoman(dominion.base.persona.Man, dominion.base.persona.Woman)
+     */
+    @Override
+    public Woman createWoman(Man father, BaseWoman mother){
+	BaseWoman woman = new BaseWoman(father, mother, new PastDate()); 
 	woman.setCulture(this.culture);
 	return woman;
     }
     
+    /* (non-Javadoc)
+     * @see dominion.base.persona.PersonaFactory#createUnknowPersona()
+     */
+    @Override
     public UnknownPersona createUnknowPersona(){
 	return new UnknownPersona();
     }

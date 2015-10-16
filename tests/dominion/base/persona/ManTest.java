@@ -6,7 +6,7 @@ import static org.mockito.Mockito.when;
 import dominion.base.characteristic.LimitedCharacteristicValue;
 import dominion.base.persona.Man;
 import dominion.base.persona.BasePersonaFactory;
-import dominion.base.persona.Woman;
+import dominion.base.persona.BaseWoman;
 import dominion.base.persona.name.FamilyName;
 import dominion.base.persona.name.FirstName;
 import dominion.base.persona.name.Patronym;
@@ -17,12 +17,13 @@ import dominion.models.persona.Gender;
 import dominion.models.persona.Persona;
 import dominion.models.persona.PersonaCharacteristic;
 import dominion.models.persona.PersonaCharacteristicMap;
+import dominion.models.persona.PersonaFactory;
 import dominion.models.persona.PersonaModifier;
 import junit.framework.TestCase;
 
 public class ManTest extends TestCase {
 
-    private BasePersonaFactory personaFactory = new BasePersonaFactory(new SlavonianCulture());
+    private PersonaFactory personaFactory = new BasePersonaFactory(new SlavonianCulture());
     
     public void testGetGender() {
 	Man man = this.createMan();
@@ -43,7 +44,7 @@ public class ManTest extends TestCase {
 
     public void testGetName() {
 	Man father = mock(Man.class);
-	Woman mother = mock(Woman.class);
+	BaseWoman mother = mock(BaseWoman.class);
 	SlavicTreePartName fatherName = this.getSlavicStubName();
 	when(father.getName()).thenReturn(fatherName);
 	Man man = this.createMan(father, mother);
@@ -52,7 +53,7 @@ public class ManTest extends TestCase {
 
     public void testGetMother(){
 	Man father = mock(Man.class);
-	Woman mother = mock(Woman.class);
+	BaseWoman mother = mock(BaseWoman.class);
 	when(father.getName()).thenReturn(this.getSlavicStubName());
 	Man man = this.createMan(father, mother);
 	assertEquals(mother, man.getMother());
@@ -85,10 +86,10 @@ public class ManTest extends TestCase {
     private Man createMan() {
 	Man father = mock(Man.class);
 	when(father.getName()).thenReturn(this.getSlavicStubName());
-	return this.createMan(father, mock(Woman.class));
+	return this.createMan(father, mock(BaseWoman.class));
     }
 
-    private Man createMan(Man father, Woman mother) {
+    private Man createMan(Man father, BaseWoman mother) {
 	return this.personaFactory.createMan(father, mother);
     }
     

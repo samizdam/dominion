@@ -4,14 +4,16 @@ import static org.mockito.Mockito.mock;
 
 import dominion.base.persona.Man;
 import dominion.base.persona.BasePersonaFactory;
-import dominion.base.persona.Woman;
+import dominion.base.persona.BaseWoman;
 import dominion.models.culture.slavic.SlavonianCulture;
 import dominion.models.persona.Gender;
+import dominion.models.persona.PersonaFactory;
+import dominion.models.persona.Woman;
 import junit.framework.TestCase;
 
-public class WomenTest extends TestCase {
+public class BaseWomenTest extends TestCase {
 
-    private BasePersonaFactory personaFactory = new BasePersonaFactory(new SlavonianCulture()); 
+    private PersonaFactory personaFactory = new BasePersonaFactory(new SlavonianCulture()); 
     
     public void testGetGender() {
 	Woman woman = this.createWoman();
@@ -34,7 +36,7 @@ public class WomenTest extends TestCase {
     }
 
     private Woman createWoman() {
-	return this.personaFactory.createWoman(mock(Man.class), mock(Woman.class));
+	return this.personaFactory.createWoman(mock(Man.class), mock(BaseWoman.class));
     }
 
 }
