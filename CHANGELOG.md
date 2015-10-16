@@ -37,11 +37,11 @@ If current section will be too long, move to wiki on bitbucket.
 - Replace Enums in models with Interfaces, use existing enums to package, m.b.
 - Titles and Ranges implementation. 
 - Mark actual progress on dia.   
-- Extract Man and Woman interfaces, rename implentations with Base prefix. 
 - Normalize Persona implementations visibility modifiers: all public method move to intarfaces, all base classes protected via Factory.     
 
 ## Version 0.1.1 - 2015-10-XX
-
+### Changed
+- Extract Man and Woman interfaces, rename implentations with Base prefix. 
 
 ## Version 0.1.0 - 2015-10-16
 ### Added
