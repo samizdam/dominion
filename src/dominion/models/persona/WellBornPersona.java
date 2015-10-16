@@ -34,7 +34,7 @@ public interface WellBornPersona extends Persona{
     
     public Culture getCulture();
     
-    public Persona getFather();
+    public Man getFather();
     
-    public Persona getMother();
+    public Woman getMother();
 }

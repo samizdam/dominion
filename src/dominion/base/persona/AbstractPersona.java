@@ -8,10 +8,12 @@ import dominion.models.Date;
 import dominion.models.culture.Culture;
 import dominion.models.feod.Feod;
 import dominion.models.persona.Gender;
+import dominion.models.persona.Man;
 import dominion.models.persona.Persona;
 import dominion.models.persona.PersonaCharacteristicMap;
 import dominion.models.persona.PersonaModifier;
 import dominion.models.persona.WellBornPersona;
+import dominion.models.persona.Woman;
 import dominion.models.persona.name.PersonaName;
 import dominion.models.persona.name.PersonaNameGenerationStrategyFactory;
 import dominion.models.title.Title;
@@ -27,10 +29,10 @@ public abstract class AbstractPersona implements WellBornPersona {
     private Collection<Feod> feods = new PriorityQueue<Feod>();
     private PersonaName name;
     private Man father;
-    private BaseWoman mother;
+    private Woman mother;
     protected Gender gender;
 
-    protected AbstractPersona(Man father, BaseWoman mother, Date dateOfBirth){
+    protected AbstractPersona(Man father, Woman mother, Date dateOfBirth){
 	this.father = father;
 	this.mother = mother;
 	this.dateOfBirth = dateOfBirth;
@@ -112,7 +114,7 @@ public abstract class AbstractPersona implements WellBornPersona {
 	return this.father;
     }
 
-    public BaseWoman getMother() {
+    public Woman getMother() {
 	return this.mother;
     }
     

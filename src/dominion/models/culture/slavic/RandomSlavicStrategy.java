@@ -1,6 +1,6 @@
 package dominion.models.culture.slavic;
 
-import dominion.base.persona.Man;
+import dominion.base.persona.BaseMan;
 import dominion.base.persona.name.FamilyName;
 import dominion.base.persona.name.FirstName;
 import dominion.base.persona.name.Patronym;
@@ -15,7 +15,7 @@ public class RandomSlavicStrategy implements PersonaNameGenerator {
     public PersonaName generateName(WellBornPersona persona) {
 	FirstNameRepository nameRepo = new HardcodedSlavicFirstNameRepository();
 	FirstName firstName = new FirstName(nameRepo.getRandomStringForName(persona.getGender()));
-	Man father = (Man) persona.getFather();
+	BaseMan father = (BaseMan) persona.getFather();
 	FirstName fatherName = father.getName().getFirstName();
 	Patronym patronym = new Patronym(fatherName); 
 	

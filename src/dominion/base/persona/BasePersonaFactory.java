@@ -3,6 +3,7 @@ package dominion.base.persona;
 import dominion.base.PastDate;
 import dominion.models.culture.Culture;
 import dominion.models.persona.CharacteristicGenerator;
+import dominion.models.persona.Man;
 import dominion.models.persona.PersonaFactory;
 import dominion.models.persona.Woman;
 import dominion.models.persona.name.PersonaNameGenerator;
@@ -41,8 +42,8 @@ class BasePersonaFactory implements PersonaFactory {
      * @see dominion.base.persona.PersonaFactory#createMan(dominion.base.persona.Man, dominion.base.persona.Woman)
      */
     @Override
-    public Man createMan(Man father, BaseWoman mother){
-	Man man = new Man(father, mother, new PastDate());
+    public Man createMan(Man father, Woman mother){
+	BaseMan man = new BaseMan(father, mother, new PastDate());
 	man.setName(this.nameGenerator.generateName(man));
 	man.setCharacteristics(this.characteristicGenerator.generateCollection(man));
 	return man;
@@ -52,7 +53,7 @@ class BasePersonaFactory implements PersonaFactory {
      * @see dominion.base.persona.PersonaFactory#createWoman(dominion.base.persona.Man, dominion.base.persona.Woman)
      */
     @Override
-    public Woman createWoman(Man father, BaseWoman mother){
+    public Woman createWoman(Man father, Woman mother){
 	BaseWoman woman = new BaseWoman(father, mother, new PastDate()); 
 	woman.setCulture(this.culture);
 	return woman;

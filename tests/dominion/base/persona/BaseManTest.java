@@ -4,7 +4,7 @@ import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
 import dominion.base.characteristic.LimitedCharacteristicValue;
-import dominion.base.persona.Man;
+import dominion.base.persona.BaseMan;
 import dominion.base.persona.BasePersonaFactory;
 import dominion.base.persona.BaseWoman;
 import dominion.base.persona.name.FamilyName;
@@ -14,14 +14,16 @@ import dominion.models.characteristic.CharacteristicValue;
 import dominion.models.culture.slavic.SlavicTreePartName;
 import dominion.models.culture.slavic.SlavonianCulture;
 import dominion.models.persona.Gender;
+import dominion.models.persona.Man;
 import dominion.models.persona.Persona;
 import dominion.models.persona.PersonaCharacteristic;
 import dominion.models.persona.PersonaCharacteristicMap;
 import dominion.models.persona.PersonaFactory;
 import dominion.models.persona.PersonaModifier;
+import dominion.models.persona.Woman;
 import junit.framework.TestCase;
 
-public class ManTest extends TestCase {
+public class BaseManTest extends TestCase {
 
     private PersonaFactory personaFactory = new BasePersonaFactory(new SlavonianCulture());
     
@@ -43,8 +45,8 @@ public class ManTest extends TestCase {
     }
 
     public void testGetName() {
-	Man father = mock(Man.class);
-	BaseWoman mother = mock(BaseWoman.class);
+	Man father = mock(BaseMan.class);
+	Woman mother = mock(BaseWoman.class);
 	SlavicTreePartName fatherName = this.getSlavicStubName();
 	when(father.getName()).thenReturn(fatherName);
 	Man man = this.createMan(father, mother);
@@ -52,7 +54,7 @@ public class ManTest extends TestCase {
     }
 
     public void testGetMother(){
-	Man father = mock(Man.class);
+	Man father = mock(BaseMan.class);
 	BaseWoman mother = mock(BaseWoman.class);
 	when(father.getName()).thenReturn(this.getSlavicStubName());
 	Man man = this.createMan(father, mother);
@@ -84,12 +86,12 @@ public class ManTest extends TestCase {
     }
     
     private Man createMan() {
-	Man father = mock(Man.class);
+	BaseMan father = mock(BaseMan.class);
 	when(father.getName()).thenReturn(this.getSlavicStubName());
 	return this.createMan(father, mock(BaseWoman.class));
     }
 
-    private Man createMan(Man father, BaseWoman mother) {
+    private Man createMan(Man father, Woman mother) {
 	return this.personaFactory.createMan(father, mother);
     }
     

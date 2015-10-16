@@ -2,7 +2,7 @@ package dominion.base.persona;
 
 import static org.mockito.Mockito.mock;
 
-import dominion.base.persona.Man;
+import dominion.base.persona.BaseMan;
 import dominion.base.persona.BasePersonaFactory;
 import dominion.base.persona.BaseWoman;
 import dominion.models.culture.slavic.SlavonianCulture;
@@ -36,7 +36,7 @@ public class BaseWomenTest extends TestCase {
     }
 
     private Woman createWoman() {
-	return this.personaFactory.createWoman(mock(Man.class), mock(BaseWoman.class));
+	return this.personaFactory.createWoman(mock(BaseMan.class), mock(BaseWoman.class));
     }
 
 }
