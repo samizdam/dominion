@@ -1,4 +1,4 @@
-package dominion.models.culture.slavic;
+package dominion.base.culture;
 
 import dominion.base.land.BaseDemosGenerator;
 import dominion.base.land.BaseLandNameGenerator;
@@ -9,36 +9,26 @@ import dominion.models.land.LandNameGenerator;
 import dominion.models.persona.CharacteristicGenerator;
 import dominion.models.persona.name.PersonaNameGenerator;
 
-/**
- * TODO extract from here to standalone mod. (top-level package or project). 
- * @author samizdam
- *
- */
-public class SlavonianCulture implements Culture {
-
-    private PersonaNameGenerator nameGenerator = new RandomSlavicStrategy();
-    private CharacteristicGenerator personaCharacteristicGenerator = new BasePersonaCharacteristicGenerator();
-    private LandNameGenerator landNameGenerator = new BaseLandNameGenerator(new HardcodedSlavicLandNameRepository());
-    private DemosGenerator demosGenerator = new BaseDemosGenerator();
+public class BaseCulture implements Culture {
 
     @Override
     public PersonaNameGenerator getPersonaNameGenerator() {
-	return this.nameGenerator ;
+	return new BasePersonaNameGenerator();
     }
 
     @Override
     public CharacteristicGenerator getPersonaCharacteristicGenerator() {
-	return this.personaCharacteristicGenerator ;
+	return new BasePersonaCharacteristicGenerator();
     }
 
     @Override
     public LandNameGenerator getLandNameGenerator() {
-	return this.landNameGenerator;
+	return new BaseLandNameGenerator(new BaseLandNameRepository());
     }
 
     @Override
     public DemosGenerator getDemosGenerator() {
-	return this.demosGenerator;
+	return new BaseDemosGenerator();
     }
 
 }

@@ -3,7 +3,6 @@ package dominion.base.persona;
 import java.util.Collection;
 import java.util.PriorityQueue;
 
-import dominion.base.persona.name.BasePersonaNameGenerationStrategy;
 import dominion.models.Date;
 import dominion.models.culture.Culture;
 import dominion.models.feod.Feod;
@@ -15,7 +14,6 @@ import dominion.models.persona.PersonaModifier;
 import dominion.models.persona.WellBornPersona;
 import dominion.models.persona.Woman;
 import dominion.models.persona.name.PersonaName;
-import dominion.models.persona.name.PersonaNameGenerationStrategyFactory;
 import dominion.models.title.Title;
 
 public abstract class AbstractPersona implements WellBornPersona {
@@ -47,8 +45,7 @@ public abstract class AbstractPersona implements WellBornPersona {
     @Override
     public PersonaName getName() {
 	if(this.name == null){
-	    PersonaNameGenerationStrategyFactory factory = new BasePersonaNameGenerationStrategy();
-	    this.name = factory.getSrategy().generateName(this);
+	    this.name = this.culture.getPersonaNameGenerator().generateName(this);
 	}
 	return this.name;
     }

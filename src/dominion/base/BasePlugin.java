@@ -1,26 +1,15 @@
 package dominion.base;
 
-import java.util.HashMap;
-import java.util.Map;
-
 import dominion.base.land.BaseLandFactory;
 import dominion.base.persona.BasePersonaFactory;
-import dominion.models.Factory;
 import dominion.models.culture.Culture;
 import dominion.models.land.LandFactory;
 import dominion.models.persona.PersonaFactory;
+import dominion.models.plugin.AbstractPlugin;
 import dominion.models.plugin.LandPlugin;
 import dominion.models.plugin.PersonaPlugin;
-import dominion.models.plugin.Plugin;
 
-public class BasePlugin implements Plugin, PersonaPlugin, LandPlugin{
-
-    private Map<String, Factory> factoriesMap = new HashMap<String, Factory>();
-
-    @Override
-    public Map<String, Factory> getFactories() {
-	return this.factoriesMap ;
-    }
+public class BasePlugin extends AbstractPlugin implements PersonaPlugin, LandPlugin{
 
     @Override
     public PersonaFactory getPersonaFactory(Culture culture) {
