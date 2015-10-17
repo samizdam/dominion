@@ -39,9 +39,13 @@ If current section will be too long, move to wiki on bitbucket.
 - Mark actual progress on dia.   
 - Normalize Persona implementations visibility modifiers: all public method move to intarfaces, all base classes protected via Factory.     
 
-## Version 0.1.1 - 2015-10-XX
+## Version 0.1.1 - 2015-10-17
+### Added
+- Drafts of base implementation for using models.
+
 ### Changed
 - Extract Man and Woman interfaces, rename implentations with Base prefix. 
+- Extract Slavic culture classes from core project. 
 
 ## Version 0.1.0 - 2015-10-16
 ### Added
