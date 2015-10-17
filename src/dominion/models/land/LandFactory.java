@@ -1,8 +1,9 @@
 package dominion.models.land;
 
+import dominion.models.Factory;
 import dominion.models.culture.Culture;
 
-public interface LandFactory {
+public interface LandFactory extends Factory{
 
     void setCulture(Culture culture);
 

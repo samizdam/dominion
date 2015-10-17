@@ -1,9 +1,10 @@
 package dominion.models.persona;
 
 import dominion.base.persona.UnknownPersona;
+import dominion.models.Factory;
 import dominion.models.persona.name.PersonaNameGenerator;
 
-public interface PersonaFactory {
+public interface PersonaFactory extends Factory {
 
     void setNameGenerator(PersonaNameGenerator nameGenerator);
 
