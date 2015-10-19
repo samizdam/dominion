@@ -1,6 +1,8 @@
 package dominion.models.land;
 
-public interface LandNameRepository {
+import dominion.models.Repository;
+
+public interface LandNameRepository extends Repository{
 
     LandName getRangomName();
 }

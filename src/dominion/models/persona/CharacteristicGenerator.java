@@ -1,6 +1,8 @@
 package dominion.models.persona;
 
-public interface CharacteristicGenerator {
+import dominion.models.Generator;
+
+public interface CharacteristicGenerator extends Generator{
 
     PersonaCharacteristicMap generateCollection(Man man);
 

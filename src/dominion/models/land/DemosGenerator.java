@@ -1,6 +1,8 @@
 package dominion.models.land;
 
-public interface DemosGenerator {
+import dominion.models.Generator;
+
+public interface DemosGenerator extends Generator{
 
     Demos generate();
 

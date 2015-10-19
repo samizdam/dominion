@@ -1,5 +1,7 @@
 package dominion.models.feod;
 
-public interface FeodFactory {
-   Feod createFeod(FeodName name);
+import dominion.models.Factory;
+
+public interface FeodFactory extends Factory {
+    Feod createFeod(FeodName name);
 }
