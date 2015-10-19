@@ -4,7 +4,7 @@ import dominion.models.land.Land;
 import dominion.models.land.LandProfit;
 import dominion.models.land.resource.ResourceMap;
 
-public class BaseProfit implements LandProfit {
+class BaseProfit implements LandProfit {
 
     Land land;
     private ResourceMap resources;

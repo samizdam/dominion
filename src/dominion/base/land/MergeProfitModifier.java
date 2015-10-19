@@ -7,7 +7,7 @@ import dominion.models.event.EventsCollection;
 import dominion.models.land.Land;
 import dominion.models.land.LandProfit;
 
-public class MergeProfitModifier extends AbstractProfitModifier {
+class MergeProfitModifier extends AbstractProfitModifier {
 
     /**
      * 

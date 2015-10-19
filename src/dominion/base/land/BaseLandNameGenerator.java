@@ -6,13 +6,12 @@ import dominion.models.land.LandNameRepository;
 
 public class BaseLandNameGenerator implements LandNameGenerator {
 
-    
-    
     private LandNameRepository repo;
-    
+
     public BaseLandNameGenerator(LandNameRepository repo) {
 	this.repo = repo;
     }
+
     @Override
     public LandName generate() {
 	return this.repo.getRangomName();
