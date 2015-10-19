@@ -1,6 +1,5 @@
 package dominion.models.persona;
 
-import dominion.base.persona.UnknownPersona;
 import dominion.models.Factory;
 import dominion.models.persona.name.PersonaNameGenerator;
 

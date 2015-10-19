@@ -5,6 +5,7 @@ import dominion.models.culture.Culture;
 import dominion.models.persona.CharacteristicGenerator;
 import dominion.models.persona.Man;
 import dominion.models.persona.PersonaFactory;
+import dominion.models.persona.UnknownPersona;
 import dominion.models.persona.Woman;
 import dominion.models.persona.name.PersonaNameGenerator;
 
@@ -64,7 +65,7 @@ public class BasePersonaFactory implements PersonaFactory {
      */
     @Override
     public UnknownPersona createUnknowPersona(){
-	return new UnknownPersona();
+	return new BaseUnknownPersona();
     }
     
 }

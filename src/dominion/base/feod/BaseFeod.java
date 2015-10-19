@@ -3,7 +3,7 @@ package dominion.base.feod;
 import java.util.ArrayList;
 import java.util.List;
 
-import dominion.base.persona.UnknownPersona;
+import dominion.base.persona.BaseUnknownPersona;
 import dominion.models.Profit;
 import dominion.models.feod.Feod;
 import dominion.models.feod.FeodName;
@@ -21,7 +21,7 @@ class BaseFeod extends AbstractFeod {
     private List<Feod> subDomains = new ArrayList<Feod>();
     private Title title;
     private Feod parentFeod;
-    private Persona ownerDeFacto = new UnknownPersona();
+    private Persona ownerDeFacto = new BaseUnknownPersona();
     private Persona ownerDeJure;
 
     @Override

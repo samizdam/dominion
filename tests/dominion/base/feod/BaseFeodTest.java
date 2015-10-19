@@ -2,7 +2,7 @@ package dominion.base.feod;
 
 import static org.mockito.Mockito.mock;
 
-import dominion.base.persona.UnknownPersona;
+import dominion.base.persona.BaseUnknownPersona;
 import dominion.models.feod.FeodName;
 import dominion.models.land.Land;
 import junit.framework.TestCase;
@@ -51,7 +51,7 @@ public class BaseFeodTest extends TestCase {
     
     public void testGetOwnerDeFacto(){
 	BaseFeod domain = this.createFeod();
-	assertEquals(UnknownPersona.class, domain.getOwnerDeFacto().getClass());
+	assertEquals(BaseUnknownPersona.class, domain.getOwnerDeFacto().getClass());
     }
 
     private BaseFeod createFeod() {
