@@ -2,6 +2,7 @@ package dominion.models.feod;
 
 import java.util.List;
 
+import dominion.models.Entity;
 import dominion.models.Name;
 import dominion.models.Profit;
 import dominion.models.culture.Culture;
@@ -9,7 +10,7 @@ import dominion.models.land.Land;
 import dominion.models.persona.*;
 import dominion.models.title.Title;
 
-public interface Feod {
+public interface Feod extends Entity{
     
     public Title getTitle();
     

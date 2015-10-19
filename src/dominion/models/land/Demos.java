@@ -1,8 +1,9 @@
 package dominion.models.land;
 
 import dominion.models.Countable;
+import dominion.models.Entity;
 
-public interface Demos extends Countable {
+public interface Demos extends Countable, Entity {
 
     int count();
     

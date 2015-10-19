@@ -1,7 +1,8 @@
 package dominion.models.land.resource;
 
+import dominion.models.ValueObject;
 
-public interface Resource {
+public interface Resource extends ValueObject{
 
     int toInt();
 
