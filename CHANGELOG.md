@@ -38,6 +38,10 @@ If current section will be too long, move to wiki on bitbucket.
 - Titles and Ranges implementation. 
 - Mark actual progress on dia.   
 - Normalize Persona implementations visibility modifiers: all public method move to intarfaces, all base classes protected via Factory.     
+- Introduce common interface for Entities. 
+
+## Version 0.1.X - 2015-10-XX
+
 
 ## Version 0.1.1 - 2015-10-17
 ### Added
