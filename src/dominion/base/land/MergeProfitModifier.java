@@ -4,6 +4,7 @@ import dominion.base.BaseEventCollection;
 import dominion.models.characteristic.Characteristic;
 import dominion.models.characteristic.CharacteristicValue;
 import dominion.models.event.EventsCollection;
+import dominion.models.land.Land;
 import dominion.models.land.LandProfit;
 
 public class MergeProfitModifier extends AbstractProfitModifier {
@@ -20,7 +21,7 @@ public class MergeProfitModifier extends AbstractProfitModifier {
     }
 
     @Override
-    public EventsCollection apply(BaseLand plot) {
+    public EventsCollection apply(Land plot) {
 	return new BaseEventCollection(new LandModifierApplied());
     }
 

@@ -10,7 +10,7 @@ import dominion.models.feod.Feod;
 import dominion.models.feod.FeodName;
 import dominion.models.land.Land;
 
-public abstract class AbstractFeod implements Feod{
+abstract class AbstractFeod implements Feod{
 
     private Name name;
     private List<Land> lands = new ArrayList<Land>();

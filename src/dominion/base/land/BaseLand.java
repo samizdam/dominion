@@ -13,7 +13,7 @@ import dominion.models.land.resource.Resource;
 import dominion.models.land.resource.ResourceMap;
 import dominion.models.land.resource.ResourceType;
 
-public class BaseLand implements Land{
+class BaseLand implements Land{
 
     private LandName name;
     private Feod domain;
