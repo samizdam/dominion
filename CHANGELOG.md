@@ -30,14 +30,15 @@ If current section will be too long, move to wiki on bitbucket.
 - Have some concept documentation.
 - Think about issue / bug tracking system. See CI tools. 
 - Think about license and open source. 
-- Run application with some simple user interface CLI (not a full functional).   
+- Run application with some simple user interface CLI (not a full functional). See to some DI-container / application-level framework (Spring etc).  
 
 ## Unrealized   
 - Demography Modifiers for Lands.
 - Replace Enums in models with Interfaces, use existing enums to package, m.b.
 - Titles and Ranges implementation. 
 - Mark actual progress on dia.   
-- Normalize Persona implementations visibility modifiers: all base classes protected via Factory.      
+- Normalize Persona implementations visibility modifiers: all base classes protected via Factory.
+- Develop event models. 
 
 ## Version 0.1.2 - 2015-10-19
 ### Added
