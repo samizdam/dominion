@@ -4,6 +4,11 @@ import dominion.base.persona.name.FamilyName;
 import dominion.base.persona.name.FirstName;
 import dominion.models.persona.name.PersonaName;
 
+/**
+ * TODO make implementation not a public. Think about culture dependencies. 
+ * @author samizdam
+ *
+ */
 public class BasePersonaName implements PersonaName {
 
     private FirstName firstName;

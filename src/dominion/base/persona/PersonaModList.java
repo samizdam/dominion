@@ -9,7 +9,7 @@ import dominion.models.persona.PersonaCharacteristicMap;
 import dominion.models.persona.PersonaModifier;
 import dominion.models.persona.WellBornPersona;
 
-public class PersonaModList extends ArrayList<PersonaModifier> {
+class PersonaModList extends ArrayList<PersonaModifier> {
 
     private WellBornPersona owner;
     
