@@ -5,7 +5,7 @@ import dominion.models.persona.Gender;
 import dominion.models.persona.Man;
 import dominion.models.persona.Woman;
 
-public class BaseMan extends AbstractPersona implements Man {
+class BaseMan extends AbstractPersona implements Man {
 
     BaseMan(Man father, Woman mother, Date dateOfBirth) {
 	super(father, mother, dateOfBirth);

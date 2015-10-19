@@ -16,7 +16,7 @@ import dominion.models.persona.Woman;
 import dominion.models.persona.name.PersonaName;
 import dominion.models.title.Title;
 
-public abstract class AbstractPersona implements WellBornPersona {
+abstract class AbstractPersona implements WellBornPersona {
     private Persona spouse;
     private Culture culture;
     private PersonaCharacteristicMap characteristics;

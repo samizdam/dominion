@@ -9,7 +9,7 @@ import dominion.models.plugin.AbstractPlugin;
 import dominion.models.plugin.LandPlugin;
 import dominion.models.plugin.PersonaPlugin;
 
-public class BasePlugin extends AbstractPlugin implements PersonaPlugin, LandPlugin{
+public class BasePlugin extends AbstractPlugin implements PersonaPlugin, LandPlugin {
 
     @Override
     public PersonaFactory getPersonaFactory(Culture culture) {
@@ -20,7 +20,7 @@ public class BasePlugin extends AbstractPlugin implements PersonaPlugin, LandPlu
 
     @Override
     public LandFactory getLandFactory(Culture culture) {
-	String factoryName  = LandFactory.class.toString();
+	String factoryName = LandFactory.class.toString();
 	this.factoriesMap.put(factoryName, new BaseLandFactory(culture));
 	return (LandFactory) this.factoriesMap.get(factoryName);
     }
