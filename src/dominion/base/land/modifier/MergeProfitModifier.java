@@ -2,7 +2,7 @@ package dominion.base.land.modifier;
 
 import dominion.base.land.event.BaseLandModifierApplied;
 import dominion.models.land.Land;
-import dominion.models.land.LandModifierAppliedEvent;
+import dominion.models.land.events.LandModifierAppliedEvent;
 
 class MergeProfitModifier extends AbstractLandModifier {
 

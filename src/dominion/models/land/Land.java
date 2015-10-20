@@ -4,6 +4,7 @@ import dominion.models.Entity;
 import dominion.models.culture.Culture;
 import dominion.models.feod.Feod;
 import dominion.models.land.events.LandModifierAddedEvent;
+import dominion.models.land.modifier.LandModifier;
 import dominion.models.land.resource.Resource;
 import dominion.models.land.resource.ResourceType;
 

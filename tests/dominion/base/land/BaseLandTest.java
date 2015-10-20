@@ -6,10 +6,10 @@ import dominion.base.culture.BaseCulture;
 import dominion.models.feod.Feod;
 import dominion.models.land.Land;
 import dominion.models.land.LandFactory;
-import dominion.models.land.LandModifier;
 import dominion.models.land.LandName;
 import dominion.models.land.LandProfit;
 import dominion.models.land.events.LandModifierAddedEvent;
+import dominion.models.land.modifier.LandModifier;
 import junit.framework.TestCase;
 
 public class BaseLandTest extends TestCase {

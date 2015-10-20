@@ -1,4 +1,4 @@
-package dominion.models.land;
+package dominion.models.land.events;
 
 import dominion.models.event.Event;
 

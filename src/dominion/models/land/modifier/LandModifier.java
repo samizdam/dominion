@@ -1,7 +1,9 @@
-package dominion.models.land;
+package dominion.models.land.modifier;
 
 
 import dominion.models.characteristic.Modifier;
+import dominion.models.land.Land;
+import dominion.models.land.events.LandModifierAppliedEvent;
 
 public interface LandModifier extends Modifier{
 

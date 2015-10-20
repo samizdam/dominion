@@ -1,8 +1,8 @@
 package dominion.base.land.event;
 
 import dominion.models.land.Land;
-import dominion.models.land.LandModifier;
 import dominion.models.land.events.LandModifierAddedEvent;
+import dominion.models.land.modifier.LandModifier;
 
 public class BaseLandModifierAdded implements LandModifierAddedEvent {
 
