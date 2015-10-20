@@ -12,8 +12,8 @@ class MergeProfitModifier extends AbstractLandModifier {
     private static final long serialVersionUID = 1L;
 
     @Override
-    public LandModifierAppliedEvent apply(Land plot) {
-	return new BaseLandModifierApplied();
+    public LandModifierAppliedEvent apply(Land land) {
+	return new BaseLandModifierApplied(land, this);
     }
 
     @Override

@@ -70,7 +70,7 @@ public class BaseManTest extends TestCase {
 	PersonaCharacteristic character = mock(PersonaCharacteristic.class);
 	CharacteristicValue backupZeroCharValue = man.getCharacteristics().get(character);
 
-	PersonaModifier mod = new BaseModifier();
+	PersonaModifier mod = new BaseModifier("Ugly man");
 	mod.put(character, new LimitedCharacteristicValue(character, 1));
 	man.addModifier(mod);
 

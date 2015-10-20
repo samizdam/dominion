@@ -75,7 +75,7 @@ abstract class AbstractPersona implements WellBornPersona {
     @Override
     public PersonaModifierAddedEvent addModifier(PersonaModifier mod) {
 	this.mods.add(mod);
-	return new BasePersonModifierAdded();
+	return new BasePersonModifierAdded(this, mod);
     }
 
     public void setCharacteristics(PersonaCharacteristicMap characteristics) {

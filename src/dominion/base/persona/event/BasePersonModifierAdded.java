@@ -9,9 +9,13 @@ public class BasePersonModifierAdded implements PersonaModifierAddedEvent {
     private PersonaModifier modifier;
     private WellBornPersona persona;
 
+    public BasePersonModifierAdded(WellBornPersona persona, PersonaModifier modifier) {
+	this.persona = this.persona;
+	this.modifier = modifier;
+    }
     @Override
     public String getMessage() {
-	return "Modifier " + this.modifier + " added to Persona " + this.persona;
+	return "Modifier " + this.modifier.getName() + " added to Persona " + this.persona.getName();
     }
 
 }
