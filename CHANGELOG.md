@@ -37,11 +37,14 @@ If current section will be too long, move to wiki on bitbucket.
 - Replace Enums in models with Interfaces, use existing enums to package, m.b.
 - Titles and Ranges implementation. 
 - Mark actual progress on dia.   
-- Normalize Persona implementations visibility modifiers: all base classes protected via Factory.
-- Develop event models. 
+- Normalize Persona implementations visibility modifiers: all base classes protected via Factory. 
+- Develop Persons feodalic relations. 
 
-## Version 0.1.3 - 2015-10-XX
-### Added base Events for Land, Persona and Feod.  
+## Version 0.1.3 - 2015-10-20
+### Added 
+- Base Events for Land, Persona and Feod.
+- BaseDemosMortalityModifier for land base package. 
+- Demos::putToDeath() method.   
 
 ## Version 0.1.2 - 2015-10-19
 ### Added
