@@ -11,4 +11,6 @@ public interface Demos extends Countable, Entity {
     
     int getNumberOfWomans();
 
+    void putToDeath(int res);
+
 }

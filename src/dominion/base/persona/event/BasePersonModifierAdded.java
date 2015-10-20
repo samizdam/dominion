@@ -10,7 +10,7 @@ public class BasePersonModifierAdded implements PersonaModifierAddedEvent {
     private WellBornPersona persona;
 
     public BasePersonModifierAdded(WellBornPersona persona, PersonaModifier modifier) {
-	this.persona = this.persona;
+	this.persona = persona;
 	this.modifier = modifier;
     }
     @Override
