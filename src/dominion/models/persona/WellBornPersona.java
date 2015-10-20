@@ -5,6 +5,7 @@ import java.util.Collection;
 import dominion.models.Date;
 import dominion.models.culture.Culture;
 import dominion.models.feod.Feod;
+import dominion.models.persona.event.PersonaModifierAddedEvent;
 import dominion.models.title.Title;
 
 public interface WellBornPersona extends Persona{
@@ -16,7 +17,7 @@ public interface WellBornPersona extends Persona{
     
     public Date getDateOfDeath();
     
-    public void addModifier(PersonaModifier mod);
+    public PersonaModifierAddedEvent addModifier(PersonaModifier mod);
     
     public void setCharacteristics(PersonaCharacteristicMap characteristics);
     

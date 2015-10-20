@@ -3,6 +3,7 @@ package dominion.base.persona;
 import java.util.Collection;
 import java.util.PriorityQueue;
 
+import dominion.base.persona.event.BasePersonModifierAdded;
 import dominion.models.Date;
 import dominion.models.culture.Culture;
 import dominion.models.feod.Feod;
@@ -13,6 +14,7 @@ import dominion.models.persona.PersonaCharacteristicMap;
 import dominion.models.persona.PersonaModifier;
 import dominion.models.persona.WellBornPersona;
 import dominion.models.persona.Woman;
+import dominion.models.persona.event.PersonaModifierAddedEvent;
 import dominion.models.persona.name.PersonaName;
 import dominion.models.title.Title;
 
@@ -71,8 +73,9 @@ abstract class AbstractPersona implements WellBornPersona {
     }
 
     @Override
-    public void addModifier(PersonaModifier mod) {
+    public PersonaModifierAddedEvent addModifier(PersonaModifier mod) {
 	this.mods.add(mod);
+	return new BasePersonModifierAdded();
     }
 
     public void setCharacteristics(PersonaCharacteristicMap characteristics) {
