@@ -27,8 +27,10 @@ class BaseFeod extends AbstractFeod {
     private Persona ownerDeJure;
 
     @Override
-    public SubDomainAddedEvent addSubDomain(Feod domain) {
-	return new BaseSubDomainAddedEvent();
+    public SubDomainAddedEvent addSubDomain(Feod sub) {
+	sub.setParentFeod(this);
+	this.subDomains.add(sub);
+	return new BaseSubDomainAddedEvent(this, sub);
 
     }
 

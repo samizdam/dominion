@@ -20,7 +20,6 @@ public class BaseFeodTest extends TestCase {
     public void testHasSubDomains() {
 	BaseFeod domain = this.createFeod();
 	assertFalse(domain.hasSubDomains());
-
     }
 
     public void testGetLands() {
@@ -46,9 +45,10 @@ public class BaseFeodTest extends TestCase {
     
     public void testSetGetParentFeod(){
 	BaseFeod domain = this.createFeod();
-	BaseFeod parentFeod = this.createFeod();
+	Feod parentFeod = mock(Feod.class); 
 	domain.setParentFeod(parentFeod);
 	assertEquals(parentFeod, domain.getParentFeod());
+	assertFalse(domain.isSovereign());
     }
     
     public void testGetOwnerDeFacto(){
@@ -60,8 +60,9 @@ public class BaseFeodTest extends TestCase {
 	BaseFeod domain = this.createFeod();
 	Feod sub = mock(Feod.class);
 	assertTrue(domain.addSubDomain(sub) instanceof SubDomainAddedEvent);
+	assertTrue(domain.hasSubDomains());
     }
-
+    
     private BaseFeod createFeod() {
 	FeodName name = mock(FeodName.class);
 	return new BaseFeod(name);
