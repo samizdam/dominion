@@ -2,11 +2,11 @@ package dominion.base.land;
 
 import dominion.base.land.resource.BaseResourceMap;
 import dominion.models.culture.Culture;
-import dominion.models.event.EventsCollection;
 import dominion.models.feod.Feod;
 import dominion.models.land.Demos;
 import dominion.models.land.Land;
 import dominion.models.land.LandModifier;
+import dominion.models.land.LandModifierAppliedEvent;
 import dominion.models.land.LandName;
 import dominion.models.land.LandProfit;
 import dominion.models.land.resource.Resource;
@@ -47,7 +47,7 @@ class BaseLand implements Land{
     }
 
     @Override
-    public EventsCollection addModifier(LandModifier mod) {
+    public LandModifierAppliedEvent addModifier(LandModifier mod) {
 	return mod.apply(this);	
     }
 

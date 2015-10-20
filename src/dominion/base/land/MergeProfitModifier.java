@@ -1,32 +1,22 @@
 package dominion.base.land;
 
-import dominion.base.BaseEventCollection;
-import dominion.models.characteristic.Characteristic;
-import dominion.models.characteristic.CharacteristicValue;
-import dominion.models.event.EventsCollection;
 import dominion.models.land.Land;
-import dominion.models.land.LandProfit;
+import dominion.models.land.LandModifierAppliedEvent;
 
-class MergeProfitModifier extends AbstractProfitModifier {
+class MergeProfitModifier extends AbstractLandModifier {
 
     /**
      * 
      */
     private static final long serialVersionUID = 1L;
-    private LandProfit profit;
 
     @Override
-    public LandProfit getProfit() {
-	return this.profit;
+    public LandModifierAppliedEvent apply(Land plot) {
+	return new BaseLandModifierAppliedEvent();
     }
 
     @Override
-    public EventsCollection apply(Land plot) {
-	return new BaseEventCollection(new LandModifierApplied());
-    }
-
-    @Override
-    public CharacteristicValue get(Characteristic character) {
+    public String getName() {
 	// TODO Auto-generated method stub
 	return null;
     }

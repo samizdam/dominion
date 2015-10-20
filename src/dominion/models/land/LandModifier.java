@@ -2,11 +2,10 @@ package dominion.models.land;
 
 
 import dominion.models.characteristic.Modifier;
-import dominion.models.event.EventsCollection;
 
 public interface LandModifier extends Modifier{
-    
-    public LandProfit getProfit();
 
-    public EventsCollection apply(Land plot);
+    public LandModifierAppliedEvent apply(Land plot);
+
+    public String getName();
 }

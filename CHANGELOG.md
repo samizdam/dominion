@@ -40,6 +40,9 @@ If current section will be too long, move to wiki on bitbucket.
 - Normalize Persona implementations visibility modifiers: all base classes protected via Factory.
 - Develop event models. 
 
+## Version 0.1.3 - 2015-10-XX
+
+
 ## Version 0.1.2 - 2015-10-19
 ### Added
 - Introduce common interface for Entities and other types.

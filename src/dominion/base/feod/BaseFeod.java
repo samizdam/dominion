@@ -3,10 +3,12 @@ package dominion.base.feod;
 import java.util.ArrayList;
 import java.util.List;
 
+import dominion.base.feod.event.BaseSubDomainAddedEvent;
 import dominion.base.persona.BaseUnknownPersona;
 import dominion.models.Profit;
 import dominion.models.feod.Feod;
 import dominion.models.feod.FeodName;
+import dominion.models.feod.event.SubDomainAddedEvent;
 import dominion.models.persona.Persona;
 import dominion.models.title.Title;
 
@@ -25,8 +27,8 @@ class BaseFeod extends AbstractFeod {
     private Persona ownerDeJure;
 
     @Override
-    public void addSubDomain(Feod domain) throws Exception {
-	throw new Exception();
+    public SubDomainAddedEvent addSubDomain(Feod domain) {
+	return new BaseSubDomainAddedEvent();
 
     }
 

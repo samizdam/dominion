@@ -13,10 +13,5 @@ class BaseModifier extends HashMap<Characteristic, CharacteristicValue> implemen
      */
     private static final long serialVersionUID = 1L;
 
-    @Override
-    public CharacteristicValue get(Characteristic character) {
-	return super.get(character);
-    }
-
 
 }

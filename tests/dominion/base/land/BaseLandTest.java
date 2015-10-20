@@ -3,11 +3,11 @@ package dominion.base.land;
 import static org.mockito.Mockito.mock;
 
 import dominion.base.culture.BaseCulture;
-import dominion.models.event.EventsCollection;
 import dominion.models.feod.Feod;
 import dominion.models.land.Land;
 import dominion.models.land.LandFactory;
 import dominion.models.land.LandModifier;
+import dominion.models.land.LandModifierAppliedEvent;
 import dominion.models.land.LandName;
 import dominion.models.land.LandProfit;
 import junit.framework.TestCase;
@@ -43,7 +43,7 @@ public class BaseLandTest extends TestCase {
     public void testAddModifier() {
 	Land land = this.createLand();
 	LandModifier mod = new MergeProfitModifier();
-	assertTrue(land.addModifier(mod) instanceof EventsCollection);
+	assertTrue(land.addModifier(mod) instanceof LandModifierAppliedEvent);
     }
 
     private Land createLand(LandName name) {

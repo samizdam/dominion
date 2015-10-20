@@ -6,7 +6,7 @@ import dominion.models.characteristic.Characteristic;
 import dominion.models.characteristic.CharacteristicValue;
 import dominion.models.land.LandModifier;
 
-abstract class AbstractProfitModifier extends HashMap<Characteristic, CharacteristicValue> implements LandModifier{
+abstract class AbstractLandModifier extends HashMap<Characteristic, CharacteristicValue> implements LandModifier{
 
     /**
      * 

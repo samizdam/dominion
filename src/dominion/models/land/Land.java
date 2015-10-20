@@ -2,7 +2,6 @@ package dominion.models.land;
 
 import dominion.models.Entity;
 import dominion.models.culture.Culture;
-import dominion.models.event.EventsCollection;
 import dominion.models.feod.Feod;
 import dominion.models.land.resource.Resource;
 import dominion.models.land.resource.ResourceType;
@@ -19,7 +18,7 @@ public interface Land extends Entity{
     
     public LandProfit getProfit();
     
-    public EventsCollection addModifier(LandModifier mod);
+    public LandModifierAppliedEvent addModifier(LandModifier mod);
     
     public Culture getDominantCulture();
 

@@ -6,8 +6,9 @@ import dominion.models.Entity;
 import dominion.models.Name;
 import dominion.models.Profit;
 import dominion.models.culture.Culture;
+import dominion.models.feod.event.SubDomainAddedEvent;
 import dominion.models.land.Land;
-import dominion.models.persona.*;
+import dominion.models.persona.Persona;
 import dominion.models.title.Title;
 
 public interface Feod extends Entity{
@@ -16,7 +17,7 @@ public interface Feod extends Entity{
     
     public Name getName();
     
-    public void addSubDomain(Feod domain) throws Exception;
+    public SubDomainAddedEvent addSubDomain(Feod domain);
 
     public List<Feod> getSubDomains();
     
