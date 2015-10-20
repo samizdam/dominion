@@ -1,5 +1,6 @@
-package dominion.base.land;
+package dominion.base.land.modifier;
 
+import dominion.base.land.event.BaseLandModifierApplied;
 import dominion.models.land.Land;
 import dominion.models.land.LandModifierAppliedEvent;
 
@@ -12,7 +13,7 @@ class MergeProfitModifier extends AbstractLandModifier {
 
     @Override
     public LandModifierAppliedEvent apply(Land plot) {
-	return new BaseLandModifierAppliedEvent();
+	return new BaseLandModifierApplied();
     }
 
     @Override

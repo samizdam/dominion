@@ -1,11 +1,11 @@
-package dominion.base.land;
+package dominion.base.land.event;
 
 import dominion.models.event.Event;
 import dominion.models.land.Land;
 import dominion.models.land.LandModifier;
 import dominion.models.land.LandModifierAppliedEvent;
 
-public class BaseLandModifierAppliedEvent implements Event, LandModifierAppliedEvent {
+public class BaseLandModifierApplied implements Event, LandModifierAppliedEvent {
 
     private LandModifier modifier;
     private Land land;

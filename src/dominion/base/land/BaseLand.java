@@ -1,19 +1,20 @@
 package dominion.base.land;
 
+import dominion.base.land.event.BaseLandModifierAdded;
 import dominion.base.land.resource.BaseResourceMap;
 import dominion.models.culture.Culture;
 import dominion.models.feod.Feod;
 import dominion.models.land.Demos;
 import dominion.models.land.Land;
 import dominion.models.land.LandModifier;
-import dominion.models.land.LandModifierAppliedEvent;
 import dominion.models.land.LandName;
 import dominion.models.land.LandProfit;
+import dominion.models.land.events.LandModifierAddedEvent;
 import dominion.models.land.resource.Resource;
 import dominion.models.land.resource.ResourceMap;
 import dominion.models.land.resource.ResourceType;
 
-class BaseLand implements Land{
+class BaseLand implements Land {
 
     private LandName name;
     private Feod domain;
@@ -21,10 +22,11 @@ class BaseLand implements Land{
     private LandProfit profit = new BaseProfit(this);
     private ResourceMap resourceMap = new BaseResourceMap();
 
-    BaseLand(LandName name, Demos demos){
+    BaseLand(LandName name, Demos demos) {
 	this.name = name;
 	this.demos = demos;
     }
+
     @Override
     public LandName getName() {
 	return this.name;
@@ -33,7 +35,7 @@ class BaseLand implements Land{
     @Override
     public void setDomain(Feod domain) {
 	this.domain = domain;
-	
+
     }
 
     @Override
@@ -43,12 +45,13 @@ class BaseLand implements Land{
 
     @Override
     public LandProfit getProfit() {
-	return this.profit ;
+	return this.profit;
     }
 
     @Override
-    public LandModifierAppliedEvent addModifier(LandModifier mod) {
-	return mod.apply(this);	
+    public LandModifierAddedEvent addModifier(LandModifier mod) {
+	mod.apply(this);
+	return new BaseLandModifierAdded();
     }
 
     @Override
@@ -56,10 +59,12 @@ class BaseLand implements Land{
 	// TODO Auto-generated method stub
 	return null;
     }
+
     @Override
     public Demos getDemos() {
-	return this.demos ;
+	return this.demos;
     }
+
     @Override
     public Resource getResource(ResourceType type) {
 	return this.resourceMap.get(type);

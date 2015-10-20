@@ -7,9 +7,9 @@ import dominion.models.feod.Feod;
 import dominion.models.land.Land;
 import dominion.models.land.LandFactory;
 import dominion.models.land.LandModifier;
-import dominion.models.land.LandModifierAppliedEvent;
 import dominion.models.land.LandName;
 import dominion.models.land.LandProfit;
+import dominion.models.land.events.LandModifierAddedEvent;
 import junit.framework.TestCase;
 
 public class BaseLandTest extends TestCase {
@@ -42,8 +42,8 @@ public class BaseLandTest extends TestCase {
 
     public void testAddModifier() {
 	Land land = this.createLand();
-	LandModifier mod = new MergeProfitModifier();
-	assertTrue(land.addModifier(mod) instanceof LandModifierAppliedEvent);
+	LandModifier mod = mock(LandModifier.class);
+	assertTrue(land.addModifier(mod) instanceof LandModifierAddedEvent);
     }
 
     private Land createLand(LandName name) {
