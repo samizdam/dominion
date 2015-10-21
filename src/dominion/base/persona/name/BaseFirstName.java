@@ -1,6 +1,8 @@
 package dominion.base.persona.name;
 
-public class BaseFirstName extends AbstractAnthroponym{
+import dominion.models.persona.name.FirstName;
+
+public class BaseFirstName extends AbstractAnthroponym implements FirstName{
 
     public BaseFirstName(String string) {
 	super(string);
