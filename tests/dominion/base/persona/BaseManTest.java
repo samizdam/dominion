@@ -79,6 +79,11 @@ public class BaseManTest extends TestCase {
 	assertTrue(backupZeroCharValue.toInt() < actualValue.toInt());
     }
 
+    public void testGetState(){
+	Man man = this.createMan();
+	assertNotNull(man.getState());
+    }
+    
     private Man createMan() {
 	BaseMan father = mock(BaseMan.class);
 	when(father.getName()).thenReturn(this.getBaseStubName());

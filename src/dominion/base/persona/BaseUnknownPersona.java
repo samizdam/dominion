@@ -14,7 +14,7 @@ import dominion.models.persona.name.PersonaName;
 public class BaseUnknownPersona implements Persona, UnknownPersona{
 
     private PersonaName name = new UnknownPersonaName();
-    private State state;
+    private State state = new DeadState();
     
     @Override
     public PersonaName getName() {

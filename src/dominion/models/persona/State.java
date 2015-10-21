@@ -1,5 +1,5 @@
 package dominion.models.persona;
 
-public interface State{
+public interface State extends dominion.models.State{
 
 }

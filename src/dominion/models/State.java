@@ -1,5 +1,5 @@
 package dominion.models;
 
-public interface State extends dominion.models.persona.State{
-
+public interface State{
+    public StateName getName();
 }

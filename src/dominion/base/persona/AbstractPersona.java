@@ -32,7 +32,7 @@ abstract class AbstractPersona implements WellBornPersona {
     private Man father;
     private Woman mother;
     protected Gender gender;
-    private State state;
+    private State state = new BaseState();
 
     protected AbstractPersona(Man father, Woman mother, Date dateOfBirth){
 	this.father = father;
