@@ -19,7 +19,7 @@ public class BasePersonaName implements PersonaFullName {
 	this.familyName = new BaseFamilyName(familyName);
     }
 
-    public FirstName getFirstName() {
+    public FirstName getGivenName() {
 	return this.firstName;
     }
 

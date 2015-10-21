@@ -9,7 +9,7 @@ public class UnknownPersonaName implements PersonaFullName {
     private FamilyName familyName = new BaseFamilyName("unknown");
     
     @Override
-    public BaseFirstName getFirstName() {
+    public BaseFirstName getGivenName() {
 	return this.firstName;
     }
 

@@ -13,6 +13,6 @@ public class BasePersonaNameTest extends TestCase {
     
     public void testGetFirstName(){
 	BasePersonaName name = new BasePersonaName("firstName", "familyName");
-	assertTrue(name.getFirstName() instanceof BaseFirstName);
+	assertTrue(name.getGivenName() instanceof BaseFirstName);
     }
 }
