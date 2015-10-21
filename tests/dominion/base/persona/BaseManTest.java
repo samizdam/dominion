@@ -5,6 +5,7 @@ import static org.mockito.Mockito.when;
 
 import dominion.base.characteristic.LimitedCharacteristicValue;
 import dominion.base.culture.BaseCulture;
+import dominion.base.persona.name.BasePersonaName;
 import dominion.models.characteristic.CharacteristicValue;
 import dominion.models.persona.Gender;
 import dominion.models.persona.Man;
@@ -14,7 +15,7 @@ import dominion.models.persona.PersonaCharacteristicMap;
 import dominion.models.persona.PersonaFactory;
 import dominion.models.persona.PersonaModifier;
 import dominion.models.persona.Woman;
-import dominion.models.persona.name.PersonaName;
+import dominion.models.persona.name.PersonaFullName;
 import junit.framework.TestCase;
 
 public class BaseManTest extends TestCase {
@@ -41,7 +42,7 @@ public class BaseManTest extends TestCase {
     public void testGetName() {
 	Man father = mock(BaseMan.class);
 	Woman mother = mock(BaseWoman.class);
-	PersonaName fatherName = this.getBaseStubName();
+	PersonaFullName fatherName = this.getBaseStubName();
 	when(father.getName()).thenReturn(fatherName);
 	Man man = this.createMan(father, mother);
 	assertNotNull(man.getName());
@@ -94,7 +95,7 @@ public class BaseManTest extends TestCase {
 	return this.personaFactory.createMan(father, mother);
     }
 
-    private PersonaName getBaseStubName() {
+    private PersonaFullName getBaseStubName() {
 	return new BasePersonaName("Иван", "Иванов");
     }
 

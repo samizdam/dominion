@@ -16,7 +16,7 @@ import dominion.models.persona.State;
 import dominion.models.persona.WellBornPersona;
 import dominion.models.persona.Woman;
 import dominion.models.persona.event.PersonaModifierAddedEvent;
-import dominion.models.persona.name.PersonaName;
+import dominion.models.persona.name.PersonaFullName;
 import dominion.models.title.Title;
 
 abstract class AbstractPersona implements WellBornPersona {
@@ -28,7 +28,7 @@ abstract class AbstractPersona implements WellBornPersona {
     private Date dateOfBirth;
     private Collection<Title> titles = new PriorityQueue<Title>();
     private Collection<Feod> feods = new PriorityQueue<Feod>();
-    private PersonaName name;
+    private PersonaFullName name;
     private Man father;
     private Woman mother;
     protected Gender gender;
@@ -47,7 +47,7 @@ abstract class AbstractPersona implements WellBornPersona {
     
     
     @Override
-    public PersonaName getName() {
+    public PersonaFullName getName() {
 	if(this.name == null){
 	    this.name = this.culture.getPersonaNameGenerator().generateName(this);
 	}
@@ -123,7 +123,7 @@ abstract class AbstractPersona implements WellBornPersona {
 	return this.mother;
     }
     
-    public void setName(PersonaName name) {
+    public void setName(PersonaFullName name) {
 	this.name = name;	
     }
 

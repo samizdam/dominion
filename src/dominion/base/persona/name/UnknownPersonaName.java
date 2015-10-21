@@ -1,14 +1,15 @@
 package dominion.base.persona.name;
 
-import dominion.models.persona.name.PersonaName;
+import dominion.models.persona.name.FamilyName;
+import dominion.models.persona.name.PersonaFullName;
 
-public class UnknownPersonaName implements PersonaName {
+public class UnknownPersonaName implements PersonaFullName {
 
-    private FirstName firstName = new FirstName("unknown");
-    private FamilyName familyName = new FamilyName("unknown");
+    private BaseFirstName firstName = new BaseFirstName("unknown");
+    private FamilyName familyName = new BaseFamilyName("unknown");
     
     @Override
-    public FirstName getFirstName() {
+    public BaseFirstName getFirstName() {
 	return this.firstName;
     }
 

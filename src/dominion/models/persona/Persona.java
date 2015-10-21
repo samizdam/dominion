@@ -1,7 +1,7 @@
 package dominion.models.persona;
 
 import dominion.models.Entity;
-import dominion.models.persona.name.PersonaName;
+import dominion.models.persona.name.PersonaFullName;
 
 /**
  * 
@@ -11,10 +11,8 @@ import dominion.models.persona.name.PersonaName;
 public interface Persona extends Entity{
     
     
-    public PersonaName getName();
-    
-    public void setName(PersonaName name);
-    
+    public PersonaFullName getName();
+        
     public State getState();
     
 }

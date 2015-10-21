@@ -1,11 +1,12 @@
 package dominion.models.persona;
 
-import dominion.models.persona.name.PersonaName;
+import dominion.base.persona.LogicException;
+import dominion.models.persona.name.PersonaFullName;
 
 public interface UnknownPersona {
 
-    PersonaName getName();
-
-    void setName(PersonaName name);
+    public PersonaFullName getName();
+    
+    public void setName(PersonaFullName name) throws LogicException;
 
 }

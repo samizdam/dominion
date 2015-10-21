@@ -1,14 +1,14 @@
 package dominion.base.culture;
 
-import dominion.base.persona.BasePersonaName;
+import dominion.base.persona.name.BasePersonaName;
 import dominion.models.persona.WellBornPersona;
-import dominion.models.persona.name.PersonaName;
+import dominion.models.persona.name.PersonaFullName;
 import dominion.models.persona.name.PersonaNameGenerator;
 
 public class BasePersonaNameGenerator implements PersonaNameGenerator {
 
     @Override
-    public PersonaName generateName(WellBornPersona persona) {
+    public PersonaFullName generateName(WellBornPersona persona) {
 	String firstName = null, familyName = null;
 	switch (persona.getGender()) {
 	case male:
