@@ -39,6 +39,12 @@ If current section will be too long, move to wiki on bitbucket.
 - Mark actual progress on dia.   
 - Normalize Persona implementations visibility modifiers: all base classes protected via Factory. 
 - Develop Persons feodalic relations. 
+- Develop Date functionality.  
+- Create classes for non-well born persons. 
+- Add some Persona life-cycle. 
+
+## Version 0.1.X - 2015-10-XX
+
 
 ## Version 0.1.3 - 2015-10-20
 ### Added 
