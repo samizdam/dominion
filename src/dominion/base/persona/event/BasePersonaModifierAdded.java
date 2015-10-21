@@ -4,12 +4,12 @@ import dominion.models.persona.PersonaModifier;
 import dominion.models.persona.WellBornPersona;
 import dominion.models.persona.event.PersonaModifierAddedEvent;
 
-public class BasePersonModifierAdded implements PersonaModifierAddedEvent {
+public class BasePersonaModifierAdded implements PersonaModifierAddedEvent {
 
     private PersonaModifier modifier;
     private WellBornPersona persona;
 
-    public BasePersonModifierAdded(WellBornPersona persona, PersonaModifier modifier) {
+    public BasePersonaModifierAdded(WellBornPersona persona, PersonaModifier modifier) {
 	this.persona = persona;
 	this.modifier = modifier;
     }

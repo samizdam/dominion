@@ -15,4 +15,6 @@ public interface Persona extends Entity{
     
     public void setName(PersonaName name);
     
+    public State getState();
+    
 }
