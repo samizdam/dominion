@@ -5,7 +5,7 @@ import dominion.models.persona.State;
 
 public class DeadState implements State{
 
-    private StateName name;
+    private StateName name = new BaseStateName("dead");
 
     @Override
     public StateName getName() {
