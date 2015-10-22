@@ -1,5 +1,6 @@
 package dominion.base.persona;
 
+import dominion.base.persona.state.DeadState;
 import junit.framework.TestCase;
 
 public class DeadStateTest extends TestCase {

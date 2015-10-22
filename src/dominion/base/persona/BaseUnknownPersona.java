@@ -1,6 +1,7 @@
 package dominion.base.persona;
 
 import dominion.base.persona.name.UnknownPersonaName;
+import dominion.base.persona.state.DeadState;
 import dominion.models.persona.Persona;
 import dominion.models.persona.State;
 import dominion.models.persona.UnknownPersona;

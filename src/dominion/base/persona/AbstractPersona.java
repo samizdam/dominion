@@ -4,6 +4,7 @@ import java.util.Collection;
 import java.util.PriorityQueue;
 
 import dominion.base.persona.event.BasePersonaModifierAdded;
+import dominion.base.persona.state.StateFactory;
 import dominion.models.Date;
 import dominion.models.culture.Culture;
 import dominion.models.feod.Feod;
@@ -32,7 +33,8 @@ abstract class AbstractPersona implements WellBornPersona {
     private Man father;
     private Woman mother;
     protected Gender gender;
-    private State state = new BaseState();
+    private StateFactory stateFactory = new StateFactory(); 
+    private State state = this.stateFactory.getState("live");
 
     protected AbstractPersona(Man father, Woman mother, Date dateOfBirth){
 	this.father = father;

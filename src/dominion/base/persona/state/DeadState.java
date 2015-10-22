@@ -1,4 +1,4 @@
-package dominion.base.persona;
+package dominion.base.persona.state;
 
 import dominion.models.StateName;
 import dominion.models.persona.State;
