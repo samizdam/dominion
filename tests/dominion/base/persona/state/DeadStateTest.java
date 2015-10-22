@@ -1,4 +1,4 @@
-package dominion.base.persona;
+package dominion.base.persona.state;
 
 import dominion.base.persona.state.DeadState;
 import junit.framework.TestCase;

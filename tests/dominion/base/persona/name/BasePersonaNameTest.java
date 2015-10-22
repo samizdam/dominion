@@ -1,4 +1,4 @@
-package dominion.base.persona;
+package dominion.base.persona.name;
 
 import dominion.base.persona.name.BaseFirstName;
 import dominion.base.persona.name.BasePersonaName;

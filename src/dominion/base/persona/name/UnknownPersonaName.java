@@ -17,6 +17,10 @@ public class UnknownPersonaName implements PersonaFullName {
     public FamilyName getFamilyName() {
 	return this.familyName ;
     }
+    
+    public String toString(){
+	return this.getGivenName().toString() + this.getFamilyName().toString();
+    }
 
 
 }
