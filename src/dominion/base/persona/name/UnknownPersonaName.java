@@ -19,7 +19,7 @@ public class UnknownPersonaName implements PersonaFullName {
     }
     
     public String toString(){
-	return this.getGivenName().toString() + this.getFamilyName().toString();
+	return this.getGivenName().toString() + " " + this.getFamilyName().toString();
     }
 
 
