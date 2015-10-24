@@ -44,7 +44,11 @@ If current section will be too long, move to wiki on bitbucket.
 - Add some Persona life-cycle. 
 
 ## Version 0.1.X - 2015-10-XX
+### Added 
+- Some Persona States. 
 
+### Changed
+- Renamed: FirstName -> GivenName
 
 ## Version 0.1.3 - 2015-10-20
 ### Added 
