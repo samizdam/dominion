@@ -50,6 +50,7 @@ If current section will be too long, move to wiki on bitbucket.
 
 ### Changed
 - Renamed: FirstName -> GivenName
+- Moved: Demos models to separate package. 
 
 ### Removed 
 - Exceptions: not used. 

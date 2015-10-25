@@ -1,6 +1,6 @@
 package dominion.base.culture;
 
-import dominion.base.land.BaseDemosGenerator;
+import dominion.base.demos.BaseDemosGenerator;
 import dominion.base.land.BaseLandNameGenerator;
 import dominion.base.persona.BasePersonaCharacteristicGenerator;
 import dominion.models.culture.Culture;

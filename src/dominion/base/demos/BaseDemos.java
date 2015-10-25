@@ -1,4 +1,4 @@
-package dominion.base.land;
+package dominion.base.demos;
 
 import dominion.models.demos.Demos;
 
