@@ -1,6 +1,6 @@
 package dominion.base.culture;
 
-import dominion.base.demos.BaseDemosGenerator;
+import dominion.Registry;
 import dominion.base.land.BaseLandNameGenerator;
 import dominion.base.persona.BasePersonaCharacteristicGenerator;
 import dominion.models.culture.Culture;
@@ -28,7 +28,7 @@ public class BaseCulture implements Culture {
 
     @Override
     public DemosGenerator getDemosGenerator() {
-	return new BaseDemosGenerator();
+	return Registry.getInstance().getDemosService().getGenerator();
     }
 
 }

@@ -2,7 +2,9 @@ package dominion.base.land;
 
 import static org.mockito.Mockito.mock;
 
+import dominion.Registry;
 import dominion.base.culture.BaseCulture;
+import dominion.base.demos.BaseDemosService;
 import dominion.models.feod.Feod;
 import dominion.models.land.Land;
 import dominion.models.land.LandFactory;
@@ -15,6 +17,12 @@ import junit.framework.TestCase;
 public class BaseLandTest extends TestCase {
 
     private LandFactory factory = new BaseLandFactory(new BaseCulture());
+    
+    @Override
+    protected void setUp() throws Exception {
+        Registry.getInstance().setDemosService(new BaseDemosService());
+        super.setUp();
+    }
 
     public void testGetName() {
 	LandName name = mock(LandName.class);

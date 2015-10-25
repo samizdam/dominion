@@ -3,7 +3,7 @@ package dominion.base.demos;
 import dominion.models.demos.Demos;
 import dominion.models.demos.DemosGenerator;
 
-public class BaseDemosGenerator implements DemosGenerator {
+class BaseDemosGenerator implements DemosGenerator {
 
     @Override
     public Demos generate() {

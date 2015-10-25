@@ -1,5 +1,6 @@
 package dominion.base.land;
 
+import dominion.Registry;
 import dominion.models.culture.Culture;
 import dominion.models.demos.Demos;
 import dominion.models.land.Land;
@@ -35,7 +36,7 @@ class BaseLandFactory implements LandFactory {
      */
     @Override
     public Land createLand(LandName name){
-	Demos demos = culture.getDemosGenerator().generate();
+	Demos demos = Registry.getInstance().getDemosService().getGenerator().generate();
 	return new BaseLand(name, demos);
     }
 
