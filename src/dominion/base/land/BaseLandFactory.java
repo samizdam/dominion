@@ -6,7 +6,7 @@ import dominion.models.land.Land;
 import dominion.models.land.LandFactory;
 import dominion.models.land.LandName;
 
-public class BaseLandFactory implements LandFactory {
+class BaseLandFactory implements LandFactory {
 
     private Culture culture;
 
