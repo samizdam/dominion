@@ -1,4 +1,4 @@
-package dominion.models.land;
+package dominion.models.demos;
 
 import dominion.models.Countable;
 import dominion.models.Entity;

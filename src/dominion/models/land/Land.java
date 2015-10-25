@@ -2,6 +2,7 @@ package dominion.models.land;
 
 import dominion.models.Entity;
 import dominion.models.culture.Culture;
+import dominion.models.demos.Demos;
 import dominion.models.feod.Feod;
 import dominion.models.land.events.LandModifierAddedEvent;
 import dominion.models.land.modifier.LandModifier;

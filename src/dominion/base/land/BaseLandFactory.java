@@ -1,7 +1,7 @@
 package dominion.base.land;
 
 import dominion.models.culture.Culture;
-import dominion.models.land.Demos;
+import dominion.models.demos.Demos;
 import dominion.models.land.Land;
 import dominion.models.land.LandFactory;
 import dominion.models.land.LandName;

@@ -1,7 +1,7 @@
 package dominion.base.land;
 
-import dominion.models.land.Demos;
-import dominion.models.land.DemosGenerator;
+import dominion.models.demos.Demos;
+import dominion.models.demos.DemosGenerator;
 
 public class BaseDemosGenerator implements DemosGenerator {
 

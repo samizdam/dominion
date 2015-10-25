@@ -4,7 +4,7 @@ import dominion.base.land.BaseDemosGenerator;
 import dominion.base.land.BaseLandNameGenerator;
 import dominion.base.persona.BasePersonaCharacteristicGenerator;
 import dominion.models.culture.Culture;
-import dominion.models.land.DemosGenerator;
+import dominion.models.demos.DemosGenerator;
 import dominion.models.land.LandNameGenerator;
 import dominion.models.persona.CharacteristicGenerator;
 import dominion.models.persona.name.PersonaNameGenerator;

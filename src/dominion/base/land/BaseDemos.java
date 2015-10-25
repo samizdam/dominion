@@ -1,6 +1,6 @@
 package dominion.base.land;
 
-import dominion.models.land.Demos;
+import dominion.models.demos.Demos;
 
 class BaseDemos implements Demos {
 
