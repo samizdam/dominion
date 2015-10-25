@@ -43,6 +43,10 @@ If current section will be too long, move to wiki on bitbucket.
 - Create classes for non-well born persons. 
 - Add some Persona life-cycle. 
 
+## Version 0.2.0 - 2015-10-XX
+### Changed
+- Configure for travic ci. 
+
 ## Version 0.1.4 - 2015-10-25
 ### Added 
 - Some Persona States. 
