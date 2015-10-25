@@ -2,15 +2,19 @@ package dominion.base;
 
 import dominion.base.land.BaseLandFactory;
 import dominion.base.persona.BasePersonaFactory;
+import dominion.base.persona.BasePersonaService;
 import dominion.models.culture.Culture;
 import dominion.models.land.LandFactory;
 import dominion.models.persona.PersonaFactory;
+import dominion.models.persona.PersonaService;
 import dominion.models.plugin.AbstractPlugin;
 import dominion.models.plugin.LandPlugin;
 import dominion.models.plugin.PersonaPlugin;
 
 public class BasePlugin extends AbstractPlugin implements PersonaPlugin, LandPlugin {
 
+    private PersonaService personaService = new BasePersonaService(); 
+    
     @Override
     public PersonaFactory getPersonaFactory(Culture culture) {
 	String factoryName = PersonaFactory.class.toString();
@@ -23,6 +27,11 @@ public class BasePlugin extends AbstractPlugin implements PersonaPlugin, LandPlu
 	String factoryName = LandFactory.class.toString();
 	this.factoriesMap.put(factoryName, new BaseLandFactory(culture));
 	return (LandFactory) this.factoriesMap.get(factoryName);
+    }
+
+    @Override
+    public PersonaService getPersonaService() {
+	return this.personaService;
     }
 
 }

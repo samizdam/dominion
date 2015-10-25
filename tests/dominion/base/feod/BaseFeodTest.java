@@ -2,15 +2,23 @@ package dominion.base.feod;
 
 import static org.mockito.Mockito.mock;
 
-import dominion.base.persona.BaseUnknownPersona;
+import dominion.Registry;
+import dominion.base.persona.BasePersonaService;
 import dominion.models.feod.Feod;
 import dominion.models.feod.FeodName;
 import dominion.models.feod.event.SubDomainAddedEvent;
 import dominion.models.land.Land;
+import dominion.models.persona.UnknownPersona;
 import junit.framework.TestCase;
 
 public class BaseFeodTest extends TestCase {
 
+    @Override
+    protected void setUp() throws Exception {
+        Registry.getInstance().setPersonaService(new BasePersonaService());
+        super.setUp();
+    }
+    
     public void testGetName() {
 	FeodName name = mock(FeodName.class);
 	BaseFeod domain = new BaseFeod(name);
@@ -53,7 +61,7 @@ public class BaseFeodTest extends TestCase {
     
     public void testGetOwnerDeFacto(){
 	BaseFeod domain = this.createFeod();
-	assertEquals(BaseUnknownPersona.class, domain.getOwnerDeFacto().getClass());
+	assertTrue(domain.getOwnerDeFacto() instanceof UnknownPersona);
     }
     
     public void testAddSubDomain(){

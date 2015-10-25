@@ -2,6 +2,9 @@ package dominion.models.persona;
 
 public interface PersonaService {
 
-    int getAge();
+    public Man createMan(Man father, Woman mother);
+    
+    public Woman createWoman(Man father, Woman mother);
 
+    public Persona createUnknownPersona();
 }
