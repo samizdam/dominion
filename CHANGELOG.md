@@ -46,15 +46,19 @@ If current section will be too long, move to wiki on bitbucket.
 ## Version 0.1.X - 2015-10-XX
 ### Added 
 - Some Persona States. 
+- Persona and Land Services. 
 
 ### Changed
 - Renamed: FirstName -> GivenName
+
+### Removed 
+- Exceptions: not used. 
 
 ## Version 0.1.3 - 2015-10-20
 ### Added 
 - Base Events for Land, Persona and Feod.
 - BaseDemosMortalityModifier for land base package. 
-- Demos::putToDeath() method.   
+- Demos::putToDeath() method. 
 
 ## Version 0.1.2 - 2015-10-19
 ### Added
