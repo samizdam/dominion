@@ -23,8 +23,8 @@ class BaseFeod extends AbstractFeod {
     private List<Feod> subDomains = new ArrayList<Feod>();
     private Title title;
     private Feod parentFeod;
-    private Persona ownerDeFacto = Registry.getInstance().getPersonaService().createUnknownPersona();
     private Persona ownerDeJure;
+    private Persona ownerDeFacto = ownerDeJure = Registry.getInstance().getPersonaService().createUnknownPersona();
 
     @Override
     public SubDomainAddedEvent addSubDomain(Feod sub) {

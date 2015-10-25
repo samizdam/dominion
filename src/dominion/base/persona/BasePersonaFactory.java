@@ -9,7 +9,7 @@ import dominion.models.persona.UnknownPersona;
 import dominion.models.persona.Woman;
 import dominion.models.persona.name.PersonaNameGenerator;
 
-public class BasePersonaFactory implements PersonaFactory {
+class BasePersonaFactory implements PersonaFactory {
     
     private Culture culture;
     

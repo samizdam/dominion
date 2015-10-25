@@ -64,6 +64,11 @@ public class BaseFeodTest extends TestCase {
 	assertTrue(domain.getOwnerDeFacto() instanceof UnknownPersona);
     }
     
+    public void testGetOwnerDeJure(){
+	BaseFeod domain = this.createFeod();
+	assertTrue(domain.getOwnerDeJure() instanceof UnknownPersona);
+    }
+    
     public void testAddSubDomain(){
 	BaseFeod domain = this.createFeod();
 	Feod sub = mock(Feod.class);

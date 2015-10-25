@@ -1,8 +1,7 @@
 package dominion.models.plugin;
 
-import dominion.models.culture.Culture;
-import dominion.models.land.LandFactory;
+import dominion.models.land.LandService;
 
 public interface LandPlugin extends Plugin{
-    public LandFactory getLandFactory(Culture culture);
+    public LandService getLandService();
 }
