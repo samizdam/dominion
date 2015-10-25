@@ -43,7 +43,7 @@ If current section will be too long, move to wiki on bitbucket.
 - Create classes for non-well born persons. 
 - Add some Persona life-cycle. 
 
-## Version 0.1.X - 2015-10-XX
+## Version 0.1.4 - 2015-10-25
 ### Added 
 - Some Persona States. 
 - Persona and Land Services. 
