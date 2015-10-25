@@ -21,12 +21,6 @@ class BaseUnknownPersona implements UnknownPersona {
     }
 
     @Override
-    public void setName(PersonaFullName name) throws LogicException {
-	throw new LogicException();
-
-    }
-
-    @Override
     public State getState() {
 	return this.state;
     }
